@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist --repo https://x-access-token:$GH_TOKEN@github.com/lodges-bretagne/landing.git"
+    "deploy": "npm run build && gh-pages -d dist --repo https://x-access-token:$GH_TOKEN@github.com/lodges-bretagne/landing.git",
+    "local-deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^10.16.16",
@@ -17,6 +18,7 @@
     "react-router-dom": "^6.20.0"
   },
   "devDependencies": {
+    "@types/node": "^20.11.0",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
