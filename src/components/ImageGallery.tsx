@@ -7,21 +7,8 @@ interface ImageGalleryProps {
   theme: 'blue' | 'green'
 }
 
-const ImageGallery = ({ images, theme }: ImageGalleryProps) => {
+const ImageGallery = ({ images }: ImageGalleryProps) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
-
-  const themeColors = {
-    blue: {
-      accent: 'text-blue-lodge-600',
-      hover: 'hover:ring-blue-lodge-500',
-    },
-    green: {
-      accent: 'text-green-lodge-600',
-      hover: 'hover:ring-green-lodge-500',
-    },
-  }
-
-  const colors = themeColors[theme]
 
   const openModal = (index: number) => {
     setSelectedIndex(index)

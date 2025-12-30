@@ -8,7 +8,7 @@ interface FeatureCardProps {
   delay?: number
 }
 
-const FeatureCard = ({ icon: Icon, title, description, theme, delay = 0 }: FeatureCardProps) => {
+const FeatureCard = ({ icon: Icon, title, description, theme }: FeatureCardProps) => {
   const themeColors = {
     blue: {
       bg: 'bg-blue-lodge-50',
