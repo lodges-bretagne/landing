@@ -4,6 +4,7 @@ import FeatureCard from '../components/FeatureCard'
 import ContactSection from '../components/ContactSection'
 import Navbar from '../components/Navbar'
 import ImageGallery from '../components/ImageGallery'
+import { contactInfo, getAirbnbUrl } from '../config/contact'
 import {
   Wifi,
   Car,
@@ -58,10 +59,10 @@ const GreenLodge = () => {
         title="Green Lodge"
         subtitle="Maison de charme bord de mer côté Dinard"
         theme="green"
-        phone="+33 6 18 66 70 87"
-        email="galerieflorence.guillot@hotmail.fr"
+        phone={contactInfo.phone}
+        email={contactInfo.email}
         backgroundImage={greenLodgeHeroImage}
-        airbnbUrl="https://www.airbnb.fr/rooms/1015591108415436590"
+        airbnbUrl={getAirbnbUrl(contactInfo.airbnb.greenLodge)}
       />
 
       <Section id="photos" className="bg-gradient-to-b from-green-lodge-50 to-white">
@@ -510,9 +511,9 @@ const GreenLodge = () => {
 
       <ContactSection
         theme="green"
-        phone="+33 6 18 66 70 87"
-        email="galerieflorence.guillot@hotmail.fr"
-        airbnbUrl="https://www.airbnb.fr/rooms/1015591108415436590"
+        phone={contactInfo.phone}
+        email={contactInfo.email}
+        airbnbUrl={getAirbnbUrl(contactInfo.airbnb.greenLodge)}
         address="Dinard, Bretagne"
       />
     </div>

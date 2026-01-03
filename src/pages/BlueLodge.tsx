@@ -4,6 +4,7 @@ import FeatureCard from '../components/FeatureCard'
 import ContactSection from '../components/ContactSection'
 import Navbar from '../components/Navbar'
 import ImageGallery from '../components/ImageGallery'
+import { contactInfo, getAirbnbUrl } from '../config/contact'
 import {
   Wifi,
   Car,
@@ -44,10 +45,10 @@ const BlueLodge = () => {
         title="Blue Lodge"
         subtitle="Charmant 2 pièces à Saint-Malo, bord de mer"
         theme="blue"
-        phone="+33 6 18 66 70 87"
-        email="galerieflorence.guillot@hotmail.fr"
+        phone={contactInfo.phone}
+        email={contactInfo.email}
         backgroundImage={blueLodgeHeroImage}
-        airbnbUrl="https://www.airbnb.fr/rooms/26058515"
+        airbnbUrl={getAirbnbUrl(contactInfo.airbnb.blueLodge)}
       />
 
       <Section id="photos" className="bg-gradient-to-b from-blue-lodge-50 to-white">
@@ -422,10 +423,10 @@ const BlueLodge = () => {
 
       <ContactSection
         theme="blue"
-        phone="+33 6 18 66 70 87"
-        email="galerieflorence.guillot@hotmail.fr"
+        phone={contactInfo.phone}
+        email={contactInfo.email}
         address="Saint-Malo, Bretagne"
-        airbnbUrl="https://www.airbnb.fr/rooms/26058515"
+        airbnbUrl={getAirbnbUrl(contactInfo.airbnb.blueLodge)}
       />
     </div>
   )
