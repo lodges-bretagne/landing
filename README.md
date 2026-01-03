@@ -23,17 +23,8 @@ npm install
 npm run dev
 ```
 
-## Build
-
-```bash
-npm run build
-```
-
 ## Déploiement sur GitHub Pages
 
 ```bash
 npm run deploy
 ```
-
-Le site sera disponible à l'adresse : `https://[votre-username].github.io/lodge/`
-
