@@ -89,6 +89,9 @@ export interface Translations {
       intramuros: string
       station: string
       access: string
+      accessBox: string
+      accessGarden: string
+      accessParking: string
     }
     pricing: {
       title: string
