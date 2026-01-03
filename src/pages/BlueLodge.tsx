@@ -21,15 +21,16 @@ import {
 import { motion } from 'framer-motion'
 
 // Images du Blue Lodge
+const baseUrl = import.meta.env.BASE_URL
 const blueLodgeImages = [
-  '/images/blue-lodge/6c294cc8-0672-4fd1-b71f-346f18617562.avif',
-  '/images/blue-lodge/731956d4-a661-411b-943c-75e9036dd389.jpg',
-  '/images/blue-lodge/84e3bb21-339a-4fc7-9cb0-e7cf260b882e.jpg',
-  '/images/blue-lodge/a06c7762-3e4c-43c7-8ffa-1f88e3851ebb.avif',
-  '/images/blue-lodge/ce1fc7ae-dff3-4360-9a4c-9184ad18ac53.avif',
-  '/images/blue-lodge/dea4c6e0-e4f2-4c5c-a0a2-15c73d882dca.avif',
-  '/images/blue-lodge/f2607d51-f29c-4ee8-96c6-89e3e57a46fc.avif',
-  '/images/blue-lodge/fd196e17-a52d-4d0d-8f02-2212a6fb3547.avif',
+  `${baseUrl}images/blue-lodge/6c294cc8-0672-4fd1-b71f-346f18617562.avif`,
+  `${baseUrl}images/blue-lodge/731956d4-a661-411b-943c-75e9036dd389.jpg`,
+  `${baseUrl}images/blue-lodge/84e3bb21-339a-4fc7-9cb0-e7cf260b882e.jpg`,
+  `${baseUrl}images/blue-lodge/a06c7762-3e4c-43c7-8ffa-1f88e3851ebb.avif`,
+  `${baseUrl}images/blue-lodge/ce1fc7ae-dff3-4360-9a4c-9184ad18ac53.avif`,
+  `${baseUrl}images/blue-lodge/dea4c6e0-e4f2-4c5c-a0a2-15c73d882dca.avif`,
+  `${baseUrl}images/blue-lodge/f2607d51-f29c-4ee8-96c6-89e3e57a46fc.avif`,
+  `${baseUrl}images/blue-lodge/fd196e17-a52d-4d0d-8f02-2212a6fb3547.avif`,
 ]
 
 // Image principale pour le Hero (première image)

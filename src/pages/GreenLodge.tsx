@@ -23,27 +23,28 @@ import {
 import { motion } from 'framer-motion'
 
 // Images du Green Lodge
+const baseUrl = import.meta.env.BASE_URL
 const greenLodgeImages = [
-  '/images/green-lodge/04133bb1-88e8-4911-bc55-aafd17ee01c9.jpeg',
-  '/images/green-lodge/05335f5c-41ac-4fd3-a5ac-05f0d94b787c.avif',
-  '/images/green-lodge/0c11e9fd-266b-400f-9699-5bd93c9e4ce3.jpeg',
-  '/images/green-lodge/1074e02a-1e90-4ebc-b73e-247480ba5da9.avif',
-  '/images/green-lodge/1d804532-df9d-444b-a536-ee0bdf29001d.avif',
-  '/images/green-lodge/20ce393e-b7eb-49e1-8fda-c8fba5b50b77.avif',
-  '/images/green-lodge/23973d59-f050-432e-ad44-6a9c20fd6b96.avif',
-  '/images/green-lodge/30eb8fa2-462a-4732-a2c4-9ae7f4992665.avif',
-  '/images/green-lodge/34d71683-fd7e-48d1-b05b-8848ff507434.avif',
-  '/images/green-lodge/520a41f5-e82d-498a-865f-1394e366c103.avif',
-  '/images/green-lodge/6d622e8b-e472-47b5-b180-7feba3b071bb.jpeg',
-  '/images/green-lodge/73eede10-9173-4acc-8654-55517db1d136.avif',
-  '/images/green-lodge/7a7f9d38-dd3a-4786-8306-04618ec01e9b.avif',
-  '/images/green-lodge/86d4927a-b695-48d2-9858-2a5d9b46d097.avif',
-  '/images/green-lodge/999b7c5e-7cd4-49d4-af11-91fcde279f4b.avif',
-  '/images/green-lodge/9c48b808-4566-4535-b816-81d1cb9860bf.avif',
-  '/images/green-lodge/c7e60d7c-c115-4594-9db3-da0949a896d5.avif',
-  '/images/green-lodge/c83ea8ed-2c50-480a-8c71-ac070d69a58a.avif',
-  '/images/green-lodge/da562d31-ffb3-42f2-8b1d-619db160b74a.avif',
-  '/images/green-lodge/fb612a86-3a18-4ce8-a9bb-46ac9f244b8f.avif',
+  `${baseUrl}images/green-lodge/04133bb1-88e8-4911-bc55-aafd17ee01c9.jpeg`,
+  `${baseUrl}images/green-lodge/05335f5c-41ac-4fd3-a5ac-05f0d94b787c.avif`,
+  `${baseUrl}images/green-lodge/0c11e9fd-266b-400f-9699-5bd93c9e4ce3.jpeg`,
+  `${baseUrl}images/green-lodge/1074e02a-1e90-4ebc-b73e-247480ba5da9.avif`,
+  `${baseUrl}images/green-lodge/1d804532-df9d-444b-a536-ee0bdf29001d.avif`,
+  `${baseUrl}images/green-lodge/20ce393e-b7eb-49e1-8fda-c8fba5b50b77.avif`,
+  `${baseUrl}images/green-lodge/23973d59-f050-432e-ad44-6a9c20fd6b96.avif`,
+  `${baseUrl}images/green-lodge/30eb8fa2-462a-4732-a2c4-9ae7f4992665.avif`,
+  `${baseUrl}images/green-lodge/34d71683-fd7e-48d1-b05b-8848ff507434.avif`,
+  `${baseUrl}images/green-lodge/520a41f5-e82d-498a-865f-1394e366c103.avif`,
+  `${baseUrl}images/green-lodge/6d622e8b-e472-47b5-b180-7feba3b071bb.jpeg`,
+  `${baseUrl}images/green-lodge/73eede10-9173-4acc-8654-55517db1d136.avif`,
+  `${baseUrl}images/green-lodge/7a7f9d38-dd3a-4786-8306-04618ec01e9b.avif`,
+  `${baseUrl}images/green-lodge/86d4927a-b695-48d2-9858-2a5d9b46d097.avif`,
+  `${baseUrl}images/green-lodge/999b7c5e-7cd4-49d4-af11-91fcde279f4b.avif`,
+  `${baseUrl}images/green-lodge/9c48b808-4566-4535-b816-81d1cb9860bf.avif`,
+  `${baseUrl}images/green-lodge/c7e60d7c-c115-4594-9db3-da0949a896d5.avif`,
+  `${baseUrl}images/green-lodge/c83ea8ed-2c50-480a-8c71-ac070d69a58a.avif`,
+  `${baseUrl}images/green-lodge/da562d31-ffb3-42f2-8b1d-619db160b74a.avif`,
+  `${baseUrl}images/green-lodge/fb612a86-3a18-4ce8-a9bb-46ac9f244b8f.avif`,
 ]
 
 // Image principale pour le Hero (première image)
