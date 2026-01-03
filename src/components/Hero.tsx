@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail } from 'lucide-react'
+import { useLanguage } from '../i18n/LanguageContext'
 
 interface HeroProps {
   title: string
@@ -12,6 +13,7 @@ interface HeroProps {
 }
 
 const Hero = ({ title, subtitle, theme, phone, email, backgroundImage, airbnbUrl }: HeroProps) => {
+  const { t } = useLanguage()
   const themeColors = {
     blue: {
       gradient: 'from-blue-lodge-600 via-blue-lodge-500 to-blue-lodge-400',
@@ -63,7 +65,7 @@ const Hero = ({ title, subtitle, theme, phone, email, backgroundImage, airbnbUrl
             {subtitle}
           </p>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto text-balance opacity-85 drop-shadow-sm">
-            Contactez-nous directement pour réserver ou pour toute question
+            {t.hero.contactUs}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
@@ -75,7 +77,7 @@ const Hero = ({ title, subtitle, theme, phone, email, backgroundImage, airbnbUrl
                 className={`${colors.button} text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg transition-all`}
               >
                 <Phone size={20} />
-                Appelez-nous : {phone}
+                {t.hero.callUs} {phone}
               </motion.a>
             )}
             {email && (
@@ -86,7 +88,7 @@ const Hero = ({ title, subtitle, theme, phone, email, backgroundImage, airbnbUrl
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 border-2 border-white/30 hover:bg-white/30 transition-all"
               >
                 <Mail size={20} />
-                Écrivez-nous
+                {t.hero.emailUs}
               </motion.a>
             )}
           </div>
@@ -99,7 +101,7 @@ const Hero = ({ title, subtitle, theme, phone, email, backgroundImage, airbnbUrl
                 rel="noopener noreferrer"
                 className="text-white/70 hover:text-white text-sm underline transition-colors"
               >
-                Voir aussi sur Airbnb
+                {t.hero.seeOnAirbnb}
               </a>
             </div>
           )}

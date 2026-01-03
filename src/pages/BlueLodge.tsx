@@ -5,6 +5,7 @@ import ContactSection from '../components/ContactSection'
 import Navbar from '../components/Navbar'
 import ImageGallery from '../components/ImageGallery'
 import { contactInfo, getAirbnbUrl } from '../config/contact'
+import { useLanguage } from '../i18n/LanguageContext'
 import {
   Wifi,
   Car,
@@ -36,12 +37,14 @@ const blueLodgeImages = [
 const blueLodgeHeroImage = blueLodgeImages[0]
 
 const BlueLodge = () => {
+  const { t } = useLanguage()
+  
   return (
     <div className="min-h-screen bg-white">
       <Navbar theme="blue" />
       <Hero
-        title="Blue Lodge"
-        subtitle="Charmant 2 pièces à Saint-Malo, bord de mer"
+        title={t.blueLodge.title}
+        subtitle={t.blueLodge.subtitle}
         theme="blue"
         phone={contactInfo.phone}
         email={contactInfo.email}
@@ -62,10 +65,10 @@ const BlueLodge = () => {
               <Camera className="text-blue-lodge-600" size={32} />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Découvrez Blue Lodge
+              {t.blueLodge.photos.title}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Un havre de paix au cœur de Saint-Malo
+              {t.blueLodge.photos.subtitle}
             </p>
           </motion.div>
           <ImageGallery images={blueLodgeImages} theme="blue" />
@@ -82,17 +85,14 @@ const BlueLodge = () => {
             className="text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Confort et calme assurés
+              {t.blueLodge.description.title}
             </h2>
             <p className="text-xl text-gray-600 text-center mb-8 max-w-3xl mx-auto leading-relaxed">
-              Le "BLUE LODGE" est idéal pour des vacances sereines au cœur de Saint Malo.
-              Proche plage, commerces, restaurants et intra muros.
+              {t.blueLodge.description.intro}
             </p>
             <div className="bg-gradient-to-r from-blue-lodge-50 to-blue-lodge-100 rounded-3xl p-8 md:p-12 max-w-3xl mx-auto">
               <p className="text-lg text-gray-800 leading-relaxed">
-                Vous serez séduits par ce beau 2 pièces de 42m² tout confort et très ensoleillé.
-                Décoré avec passion, il est situé au 2ème et dernier étage et possède son jardin privé de 110m² en bas de la résidence.
-                Sans vis à vis, grandes fenêtres, très lumineux, vue dégagée sur coucher de soleil.
+                {t.blueLodge.description.details}
               </p>
             </div>
           </motion.div>
@@ -107,49 +107,49 @@ const BlueLodge = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Équipements & Prestations
+            {t.blueLodge.features.title}
           </h2>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeatureCard
             icon={Wifi}
-            title="WiFi gratuit"
-            description="Connexion internet haut débit incluse"
+            title={t.blueLodge.features.wifi.title}
+            description={t.blueLodge.features.wifi.desc}
             theme="blue"
             delay={0}
           />
           <FeatureCard
             icon={Bed}
-            title="Draps inclus"
-            description="Le lit sera fait à votre arrivée"
+            title={t.blueLodge.features.sheets.title}
+            description={t.blueLodge.features.sheets.desc}
             theme="blue"
             delay={0.1}
           />
           <FeatureCard
             icon={Droplets}
-            title="Serviette de douche"
-            description="Serviette fournie pour votre confort"
+            title={t.blueLodge.features.towel.title}
+            description={t.blueLodge.features.towel.desc}
             theme="blue"
             delay={0.2}
           />
           <FeatureCard
             icon={Car}
-            title="Parking privé"
-            description="Place de parking gratuite devant votre jardin"
+            title={t.blueLodge.features.parking.title}
+            description={t.blueLodge.features.parking.desc}
             theme="blue"
             delay={0.3}
           />
           <FeatureCard
             icon={Bike}
-            title="Box vélo/moto"
-            description="Box fermé pour 2 vélos ou 1 moto"
+            title={t.blueLodge.features.bikeBox.title}
+            description={t.blueLodge.features.bikeBox.desc}
             theme="blue"
             delay={0.4}
           />
           <FeatureCard
             icon={Sun}
-            title="Jardin privé"
-            description="Jardin de 110m² avec chaises, table et barbecue"
+            title={t.blueLodge.features.garden.title}
+            description={t.blueLodge.features.garden.desc}
             theme="blue"
             delay={0.5}
           />
@@ -159,7 +159,7 @@ const BlueLodge = () => {
       <Section id="logement" className="bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Le logement
+            {t.blueLodge.accommodation.title}
           </h2>
           
           <div className="space-y-8">
@@ -172,15 +172,13 @@ const BlueLodge = () => {
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3">
                 <Home className="text-blue-lodge-600" size={28} />
-                Appartement de 42m²
+                {t.blueLodge.accommodation.apartment}
               </h3>
               <p className="text-gray-700 mb-4">
-                Deux pièces situé au cœur de Saint Malo et sa jolie PLAGE du sillon accessible à pieds en 20mn.
-                Commerces et restaurant à 10MN à pieds.
+                {t.blueLodge.accommodation.apartmentDesc1}
               </p>
               <p className="text-gray-700">
-                Exposition sud ouest, pièces baignées de soleil (grande fenêtre).
-                Son jardin ensoleillé de 110m² est situé au pied de cette petite résidence Familiale (exclusivement réservé pour vous avec sa place parking PRIVÉE).
+                {t.blueLodge.accommodation.apartmentDesc2}
               </p>
             </motion.div>
 
@@ -194,13 +192,12 @@ const BlueLodge = () => {
               >
                 <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                   <Bed className="text-blue-lodge-600" size={24} />
-                  Chambre
+                  {t.blueLodge.accommodation.bedroom}
                 </h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Chambre cocooning, bonne literie</li>
-                  <li>• Matelas GRAND HOTEL</li>
-                  <li>• Couette et oreillers "LENORMAND" de qualité</li>
-                  <li>• Petit bureau</li>
+                  {t.blueLodge.accommodation.bedroomItems.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </motion.div>
 
@@ -213,12 +210,12 @@ const BlueLodge = () => {
               >
                 <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                   <Home className="text-blue-lodge-600" size={24} />
-                  Salon / Salle à manger
+                  {t.blueLodge.accommodation.livingRoom}
                 </h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Télé écran plat</li>
-                  <li>• Table à manger</li>
-                  <li>• Canapé, fauteuil</li>
+                  {t.blueLodge.accommodation.livingRoomItems.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </motion.div>
 
@@ -231,13 +228,12 @@ const BlueLodge = () => {
               >
                 <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                   <UtensilsCrossed className="text-blue-lodge-600" size={24} />
-                  Cuisine
+                  {t.blueLodge.accommodation.kitchen}
                 </h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Cuisine neuve, toute équipée</li>
-                  <li>• Cafetière à piston BODUM</li>
-                  <li>• Grille pain, four, micro ondes</li>
-                  <li>• Table et chaises</li>
+                  {t.blueLodge.accommodation.kitchenItems.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </motion.div>
 
@@ -250,13 +246,12 @@ const BlueLodge = () => {
               >
                 <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                   <Droplets className="text-blue-lodge-600" size={24} />
-                  Salle de bain
+                  {t.blueLodge.accommodation.bathroom}
                 </h4>
                 <ul className="space-y-2 text-gray-700">
-                  <li>• Salle de bain 6m²</li>
-                  <li>• Grande douche à l'italienne de 1m60</li>
-                  <li>• Meuble vasque, WC</li>
-                  <li>• Machine à laver + étendoir</li>
+                  {t.blueLodge.accommodation.bathroomItems.map((item, index) => (
+                    <li key={index}>• {item}</li>
+                  ))}
                 </ul>
               </motion.div>
             </div>
@@ -267,7 +262,7 @@ const BlueLodge = () => {
       <Section id="localisation" className="bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Localisation & Commodités
+            {t.blueLodge.location.title}
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -280,24 +275,24 @@ const BlueLodge = () => {
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                 <MapPin className="text-blue-lodge-600" size={28} />
-                À proximité
+                {t.blueLodge.location.nearby}
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-2">
                   <Beach className="text-blue-lodge-500 mt-1" size={20} />
-                  <span><strong>Plage du Sillon</strong> "Plus belle plage de France" à 1300m</span>
+                  <span>{t.blueLodge.location.beach}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <UtensilsCrossed className="text-blue-lodge-500 mt-1" size={20} />
-                  <span><strong>Boulangerie artisanale</strong>, commerces et restaurants à 600m</span>
+                  <span>{t.blueLodge.location.shops}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Home className="text-blue-lodge-500 mt-1" size={20} />
-                  <span><strong>Intra-Muros</strong>: 7mn en voiture / 14mn en vélo</span>
+                  <span>{t.blueLodge.location.intramuros}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Bike className="text-blue-lodge-500 mt-1" size={20} />
-                  <span><strong>Gare</strong>: 5mn en bus (arrêt bus au 50m de la résidence)</span>
+                  <span>{t.blueLodge.location.station}</span>
                 </li>
               </ul>
             </motion.div>
@@ -311,17 +306,17 @@ const BlueLodge = () => {
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                 <Waves className="text-blue-lodge-600" size={28} />
-                Accès
+                {t.blueLodge.location.access}
               </h3>
               <div className="space-y-3 text-gray-700">
                 <p>
-                  <strong>BOX fermé</strong> pour 2 vélos ou 1 moto.
+                  {t.blueLodge.location.accessBox}
                 </p>
                 <p>
-                  <strong>JARDIN privé</strong> (uniquement pour vous) de 110m² au pied de la copropriété.
+                  {t.blueLodge.location.accessGarden}
                 </p>
                 <p>
-                  <strong>PARKING PRIVÉ GRATUIT</strong> (devant votre jardin).
+                  {t.blueLodge.location.accessParking}
                 </p>
               </div>
             </motion.div>
@@ -332,7 +327,7 @@ const BlueLodge = () => {
       <Section id="tarifs" className="bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Tarifs & Conditions
+            {t.blueLodge.pricing.title}
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -344,41 +339,15 @@ const BlueLodge = () => {
               className="bg-blue-lodge-50 rounded-xl p-8 border-2 border-blue-lodge-200"
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Inclus dans le prix
+                {t.common.included}
               </h3>
               <ul className="space-y-3 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-lodge-600">✓</span>
-                  <span>WiFi</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-lodge-600">✓</span>
-                  <span>Draps de lit (le lit sera fait à votre arrivée)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-lodge-600">✓</span>
-                  <span>Serviette de douche</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-lodge-600">✓</span>
-                  <span>Produits d'entretien + torchon</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-lodge-600">✓</span>
-                  <span>Lave linge</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-lodge-600">✓</span>
-                  <span>Parking</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-lodge-600">✓</span>
-                  <span>Petit garage moto ou vélos (fermé et privé)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-blue-lodge-600">✓</span>
-                  <span>Jardin (chaises et table), barbecue</span>
-                </li>
+                {t.blueLodge.pricing.included.map((item, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <span className="text-blue-lodge-600">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
 
@@ -390,29 +359,23 @@ const BlueLodge = () => {
               className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200"
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Non inclus (payable à l'arrivée)
+                {t.common.notIncluded}
               </h3>
               <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-600">•</span>
-                  <span><strong>Ménage 30€</strong> (l'appartement doit être laissé propre)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-600">•</span>
-                  <span><strong>Ménage complet 60€</strong> si vous ne souhaitez pas faire le ménage du tout (merci de prévenir)</span>
-                </li>
+                {t.blueLodge.pricing.notIncluded.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="text-gray-600">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
               
               <div className="mt-6 pt-6 border-t border-gray-300">
-                <p className="text-sm text-gray-600">
-                  <strong>Note :</strong> Location du samedi au samedi pendant les vacances d'été
-                </p>
-                <p className="text-sm text-gray-600 mt-2">
-                  Appartement non fumeur. Animaux non acceptés.
-                </p>
-                <p className="text-sm text-gray-600 mt-2">
-                  Maximum un couple. Bébé possible sur demande avec supplément.
-                </p>
+                {t.blueLodge.pricing.notes.map((note, index) => (
+                  <p key={index} className={`text-sm text-gray-600 ${index > 0 ? 'mt-2' : ''}`}>
+                    {index === 0 ? <><strong>Note :</strong> {note}</> : note}
+                  </p>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -423,7 +386,6 @@ const BlueLodge = () => {
         theme="blue"
         phone={contactInfo.phone}
         email={contactInfo.email}
-        address="Saint-Malo, Bretagne"
         airbnbUrl={getAirbnbUrl(contactInfo.airbnb.blueLodge)}
       />
     </div>

@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
+import { useLanguage } from '../i18n/LanguageContext'
 
 const baseUrl = import.meta.env.BASE_URL
 
 const Home = () => {
+  const { t } = useLanguage()
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <Navbar />
@@ -16,10 +19,10 @@ const Home = () => {
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-            Bienvenue dans nos lodges
+            {t.home.title}
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Découvrez nos hébergements de charme à Saint-Malo et Dinard
+            {t.home.subtitle}
           </p>
         </motion.div>
 
@@ -39,17 +42,17 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-lodge-900/70 via-blue-lodge-800/60 to-blue-lodge-700/70"></div>
                   <div className="text-white text-center relative z-10">
                     <h2 className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">
-                      Blue Lodge
+                      {t.home.blueLodge.title}
                     </h2>
-                    <p className="text-blue-lodge-100 text-lg">Saint-Malo</p>
+                    <p className="text-blue-lodge-100 text-lg">{t.home.blueLodge.location}</p>
                   </div>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                    Charmant 2 pièces bord de mer
+                    {t.home.blueLodge.description}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Appartement de 42m² avec jardin privé de 110m², proche de la plage du Sillon
+                    {t.home.blueLodge.subtitle}
                   </p>
                 </div>
               </div>
@@ -71,17 +74,17 @@ const Home = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-green-lodge-900/70 via-green-lodge-800/60 to-green-lodge-700/70"></div>
                   <div className="text-white text-center relative z-10">
                     <h2 className="text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">
-                      Green Lodge
+                      {t.home.greenLodge.title}
                     </h2>
-                    <p className="text-green-lodge-100 text-lg">Dinard</p>
+                    <p className="text-green-lodge-100 text-lg">{t.home.greenLodge.location}</p>
                   </div>
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                    Maison de charme bord de mer
+                    {t.home.greenLodge.description}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Maison authentique de 85m² avec jardin, classée 2 étoiles, côté Dinard
+                    {t.home.greenLodge.subtitle}
                   </p>
                 </div>
               </div>

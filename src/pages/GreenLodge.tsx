@@ -5,6 +5,7 @@ import ContactSection from '../components/ContactSection'
 import Navbar from '../components/Navbar'
 import ImageGallery from '../components/ImageGallery'
 import { contactInfo, getAirbnbUrl } from '../config/contact'
+import { useLanguage } from '../i18n/LanguageContext'
 import {
   Wifi,
   Car,
@@ -50,12 +51,14 @@ const greenLodgeImages = [
 const greenLodgeHeroImage = greenLodgeImages[0]
 
 const GreenLodge = () => {
+  const { t } = useLanguage()
+  
   return (
     <div className="min-h-screen bg-white">
       <Navbar theme="green" />
       <Hero
-        title="Green Lodge"
-        subtitle="Maison de charme bord de mer côté Dinard"
+        title={t.greenLodge.title}
+        subtitle={t.greenLodge.subtitle}
         theme="green"
         phone={contactInfo.phone}
         email={contactInfo.email}
@@ -96,28 +99,27 @@ const GreenLodge = () => {
             className="text-center"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Posez vos valises et profitez
+              {t.greenLodge.description.title}
             </h2>
             <p className="text-xl text-gray-600 text-center mb-4 max-w-3xl mx-auto leading-relaxed">
-              Les lits seront faits à votre arrivée.
+              {t.greenLodge.description.bedsMade}
             </p>
             <div className="bg-gradient-to-r from-green-lodge-50 to-green-lodge-100 rounded-3xl p-8 md:p-12 max-w-3xl mx-auto mb-8">
               <p className="text-lg text-gray-800 leading-relaxed mb-6">
-                Maison en pierre <strong>CLASSÉE 2 étoiles</strong>. Entièrement rénovée, elle est équipée de toutes les commodités, 
-                de la WIFI et d'un joli petit jardin plein SUD pour vos repas au calme en famille ou entre amis.
+                {t.greenLodge.description.intro}
               </p>
               <div className="space-y-4 pt-6 border-t border-green-lodge-200">
                 <p className="text-lg text-gray-800 flex items-center justify-center gap-3">
                   <Waves className="text-green-lodge-600" size={24} />
-                  <strong>Mer et GR34 à 950m à pied</strong>
+                  <strong>{t.greenLodge.description.seaDistance}</strong>
                 </p>
                 <p className="text-lg text-gray-800 flex items-center justify-center gap-3">
                   <UtensilsCrossed className="text-green-lodge-600" size={24} />
-                  <strong>Commerces et restaurants à 4mn</strong>
+                  <strong>{t.greenLodge.description.shopsDistance}</strong>
                 </p>
                 <p className="text-lg text-gray-800 flex items-center justify-center gap-3">
                   <MapPin className="text-green-lodge-600" size={24} />
-                  <strong>Situé côté DINARD (5km)</strong>
+                  <strong>{t.greenLodge.description.dinardDistance}</strong>
                 </p>
               </div>
             </div>
@@ -133,49 +135,49 @@ const GreenLodge = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Équipements & Prestations
+            {t.greenLodge.features.title}
           </h2>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeatureCard
             icon={Wifi}
-            title="WiFi gratuit"
-            description="Connexion internet haut débit incluse"
+            title={t.greenLodge.features.wifi.title}
+            description={t.greenLodge.features.wifi.desc}
             theme="green"
             delay={0}
           />
           <FeatureCard
             icon={Bed}
-            title="Draps de lits inclus"
-            description="Les lits seront faits à votre arrivée"
+            title={t.greenLodge.features.sheets.title}
+            description={t.greenLodge.features.sheets.desc}
             theme="green"
             delay={0.1}
           />
           <FeatureCard
             icon={Droplets}
-            title="Serviette douche"
-            description="Serviette fournie pour votre confort"
+            title={t.greenLodge.features.towel.title}
+            description={t.greenLodge.features.towel.desc}
             theme="green"
             delay={0.2}
           />
           <FeatureCard
             icon={Car}
-            title="Parking privé"
-            description="Place parking gravillonnée pour une voiture ou deux motos"
+            title={t.greenLodge.features.parking.title}
+            description={t.greenLodge.features.parking.desc}
             theme="green"
             delay={0.3}
           />
           <FeatureCard
             icon={Sun}
-            title="Jardin 100m²"
-            description="Jardin plein SUD avec terrasse meublée et barbecue Weber"
+            title={t.greenLodge.features.garden.title}
+            description={t.greenLodge.features.garden.desc}
             theme="green"
             delay={0.4}
           />
           <FeatureCard
             icon={Users}
-            title="Jusqu'à 5 personnes"
-            description="Maison de 85m² avec 3 chambres"
+            title={t.greenLodge.features.capacity.title}
+            description={t.greenLodge.features.capacity.desc}
             theme="green"
             delay={0.5}
           />
@@ -185,7 +187,7 @@ const GreenLodge = () => {
       <Section id="logement" className="bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Le logement
+            {t.greenLodge.accommodation.title}
           </h2>
           
           <motion.div
@@ -197,20 +199,18 @@ const GreenLodge = () => {
           >
             <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-3">
               <Home className="text-green-lodge-600" size={28} />
-              Maison authentique de pêcheur de 85m²
+              {t.greenLodge.accommodation.house}
             </h3>
             <div className="space-y-4 text-gray-700">
               <p className="leading-relaxed">
-                Cette charmante maison en pierre, classée 2 étoiles, vous accueille dans un cadre authentique et chaleureux. 
-                Entièrement rénovée avec soin, elle conserve tout le charme de son histoire de maison de pêcheur tout en offrant 
-                tout le confort moderne nécessaire à un séjour agréable.
+                {t.greenLodge.accommodation.houseDesc}
               </p>
             </div>
           </motion.div>
 
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">REZ-DE-CHAUSSÉE</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t.greenLodge.accommodation.groundFloor}</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -221,10 +221,10 @@ const GreenLodge = () => {
                 >
                   <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <Home className="text-green-lodge-600" size={24} />
-                    Grand salon / Salle à manger
+                    {t.greenLodge.accommodation.livingRoom}
                   </h4>
-                  <p className="text-gray-700">46m² avec cuisine toute équipée</p>
-                  <p className="text-gray-700 mt-2">WC séparé</p>
+                  <p className="text-gray-700">{t.greenLodge.accommodation.livingRoomDesc}</p>
+                  <p className="text-gray-700 mt-2">{t.greenLodge.accommodation.bathroomItems[1]}</p>
                 </motion.div>
 
                 <motion.div
@@ -236,23 +236,19 @@ const GreenLodge = () => {
                 >
                   <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <UtensilsCrossed className="text-green-lodge-600" size={24} />
-                    Cuisine équipée
+                    {t.greenLodge.accommodation.kitchen}
                   </h4>
                   <ul className="space-y-2 text-gray-700 text-sm">
-                    <li>• Lave vaisselle, lave linge</li>
-                    <li>• Micro onde, four</li>
-                    <li>• Frigo-congélateur neuf</li>
-                    <li>• Cafetière Nespresso</li>
-                    <li>• Bouilloire, appareil à raclette</li>
-                    <li>• Sel/Poivre, Huile/Vinaigre inclus</li>
-                    <li>• Produits d'entretien inclus</li>
+                    {t.greenLodge.accommodation.kitchenItems.map((item, index) => (
+                      <li key={index}>• {item}</li>
+                    ))}
                   </ul>
                 </motion.div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">ÉTAGE</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t.greenLodge.accommodation.floor}</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -263,15 +259,15 @@ const GreenLodge = () => {
                 >
                   <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <Bed className="text-green-lodge-600" size={24} />
-                    3 Chambres
+                    {t.greenLodge.accommodation.bedrooms}
                   </h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li><strong>1ère chambre :</strong> Lit 140 / 2 personnes + grand placard</li>
-                    <li><strong>2ème chambre :</strong> Lit 140 / 2 personnes + grand placard</li>
-                    <li><strong>3ème chambre :</strong> Lit 90 / 1 personne + grand placard</li>
+                    <li><strong>{t.greenLodge.accommodation.bedroom1.split(':')[0]}:</strong> {t.greenLodge.accommodation.bedroom1.split(':')[1]}</li>
+                    <li><strong>{t.greenLodge.accommodation.bedroom2.split(':')[0]}:</strong> {t.greenLodge.accommodation.bedroom2.split(':')[1]}</li>
+                    <li><strong>{t.greenLodge.accommodation.bedroom3.split(':')[0]}:</strong> {t.greenLodge.accommodation.bedroom3.split(':')[1]}</li>
                   </ul>
                   <p className="text-sm text-gray-600 mt-3">
-                    <strong>Note :</strong> En dessous de 5 voyageurs, la troisième chambre restera fermée.
+                    <strong>Note :</strong> {t.greenLodge.accommodation.bedroomNote}
                   </p>
                 </motion.div>
 
@@ -284,11 +280,12 @@ const GreenLodge = () => {
                 >
                   <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <Droplets className="text-green-lodge-600" size={24} />
-                    Salle de bain
+                    {t.greenLodge.accommodation.bathroom}
                   </h4>
                   <ul className="space-y-2 text-gray-700">
-                    <li>• Salle de bain avec douche neuve</li>
-                    <li>• WC séparé</li>
+                    {t.greenLodge.accommodation.bathroomItems.map((item, index) => (
+                      <li key={index}>• {item}</li>
+                    ))}
                   </ul>
                 </motion.div>
               </div>
@@ -303,12 +300,12 @@ const GreenLodge = () => {
             >
               <h4 className="text-xl font-semibold text-gray-900 mb-3 flex items-center gap-2">
                 <Sun className="text-green-lodge-600" size={24} />
-                EXTÉRIEUR
+                {t.greenLodge.accommodation.exterior}
               </h4>
               <ul className="space-y-2 text-gray-700">
-                <li>• Jardin de 100m² avec terrasse meublée</li>
-                <li>• Barbecue Weber</li>
-                <li>• Place parking gravillonnée pour UNE voiture ou DEUX motos</li>
+                {t.greenLodge.accommodation.exteriorItems.map((item, index) => (
+                  <li key={index}>• {item}</li>
+                ))}
               </ul>
             </motion.div>
           </div>
@@ -318,7 +315,7 @@ const GreenLodge = () => {
       <Section id="loisirs" className="bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Loisirs & Activités
+            {t.greenLodge.activities.title}
           </h2>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -331,16 +328,16 @@ const GreenLodge = () => {
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                 <Waves className="text-green-lodge-600" size={28} />
-                Activités nautiques
+                {t.greenLodge.activities.waterSportsTitle}
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-2">
                   <Ship className="text-green-lodge-500 mt-1" size={20} />
-                  <span>Voile, kayak, paddle - Cale de mise à l'eau et École de Voile à la Richardais (2km)</span>
+                  <span>{t.greenLodge.activities.waterSports}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Ship className="text-green-lodge-500 mt-1" size={20} />
-                  <span>Traversée Dinard/Saint Malo en BATEAU-NAVETTE (10mn)</span>
+                  <span>{t.greenLodge.activities.ferry}</span>
                 </li>
               </ul>
             </motion.div>
@@ -354,16 +351,16 @@ const GreenLodge = () => {
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
                 <MapPin className="text-green-lodge-600" size={28} />
-                À proximité
+                {t.greenLodge.activities.nearby}
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-2">
                   <MapPin className="text-green-lodge-500 mt-1" size={20} />
-                  <span><strong>Saint Malo</strong> à 10mn (barrage de la Rance à 5mn)</span>
+                  <span><strong>{t.greenLodge.activities.saintMalo}</strong></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <MapPin className="text-green-lodge-500 mt-1" size={20} />
-                  <span><strong>Saint Briac, Lancieux</strong></span>
+                  <span><strong>{t.greenLodge.activities.other}</strong></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Mountain className="text-green-lodge-500 mt-1" size={20} />
@@ -371,11 +368,11 @@ const GreenLodge = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <Bike className="text-green-lodge-500 mt-1" size={20} />
-                  <span>Location vélo possible à Dinard</span>
+                  <span>{t.greenLodge.activities.bike}</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Mountain className="text-green-lodge-500 mt-1" size={20} />
-                  <span>Superbe Golf de SAINT BRIAC (vue mer 10km)</span>
+                  <span>{t.greenLodge.activities.golf}</span>
                 </li>
               </ul>
             </motion.div>
@@ -386,7 +383,7 @@ const GreenLodge = () => {
       <Section id="tarifs" className="bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Tarifs & Conditions
+            {t.greenLodge.pricing.title}
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -398,33 +395,15 @@ const GreenLodge = () => {
               className="bg-green-lodge-50 rounded-xl p-8 border-2 border-green-lodge-200"
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Inclus dans le prix
+                {t.common.included}
               </h3>
               <ul className="space-y-3 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <span className="text-green-lodge-600">✓</span>
-                  <span>Draps de lits</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-lodge-600">✓</span>
-                  <span>Serviette douche</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-lodge-600">✓</span>
-                  <span>WiFi</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-lodge-600">✓</span>
-                  <span>Parking privé</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-lodge-600">✓</span>
-                  <span>Produits entretien, torchons</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-green-lodge-600">✓</span>
-                  <span>Chauffage automne et hiver uniquement</span>
-                </li>
+                {t.greenLodge.pricing.included.map((item, index) => (
+                  <li key={index} className="flex items-center gap-2">
+                    <span className="text-green-lodge-600">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
 
@@ -436,37 +415,23 @@ const GreenLodge = () => {
               className="bg-gray-50 rounded-xl p-8 border-2 border-gray-200"
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Non inclus (payable à l'arrivée)
+                {t.common.notIncluded}
               </h3>
               <ul className="space-y-3 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-600">•</span>
-                  <span><strong>Ménage 60€</strong> (la maison doit être laissée propre)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-600">•</span>
-                  <span><strong>Ménage complet 120€</strong> si vous ne souhaitez pas faire le ménage du tout (merci de prévenir et de régler à votre arrivée)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gray-600">•</span>
-                  <span><strong>Chauffage printemps/été</strong>: 0,20€ du Kilowatt/heure (relevé de compteur à votre arrivée)</span>
-                </li>
+                {t.greenLodge.pricing.notIncluded.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <span className="text-gray-600">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
               </ul>
               
               <div className="mt-6 pt-6 border-t border-gray-300">
-                <p className="text-sm text-gray-600 mb-2">
-                  <strong>Nombre de voyageurs :</strong> Maximum 5 personnes
-                </p>
-                <p className="text-sm text-gray-600 mb-2">
-                  Pour les réservations de 3 ou 4 voyageurs, seules 2 chambres seront ouvertes. 
-                  La troisième chambre est réservée pour les réservations de 5 voyageurs.
-                </p>
-                <p className="text-sm text-gray-600">
-                  <strong>Location :</strong> Du samedi au samedi en juillet/août
-                </p>
-                <p className="text-sm text-gray-600 mt-2">
-                  Maison avec cheminée. Pare-feu obligatoire, bûches non fournies.
-                </p>
+                {t.greenLodge.pricing.notes.map((note, index) => (
+                  <p key={index} className={`text-sm text-gray-600 ${index > 0 ? 'mb-2' : ''}`}>
+                    {note}
+                  </p>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -476,7 +441,7 @@ const GreenLodge = () => {
       <Section id="acces" className="bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
-            Accès & Itinéraire
+            {t.greenLodge.access.title}
           </h2>
           
           <motion.div
@@ -487,20 +452,17 @@ const GreenLodge = () => {
             className="bg-white rounded-xl p-8 border-2 border-green-lodge-200"
           >
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Comment nous trouver
+              {t.greenLodge.access.howToFind}
             </h3>
             <p className="text-gray-700 mb-4">
-              Si vous arrivez de Saint Malo, traversez le barrage de la Rance et prenez de suite à droite 
-              direction la RICHARDAIS, juste avant le MINIHIC SUR RANCE tourner à droite vers le lieu dit 
-              "SAINT ANTOINE", vous êtes arrivés.
+              {t.greenLodge.access.directions}
             </p>
             <div className="bg-green-lodge-50 rounded-lg p-4 mt-4">
               <p className="text-gray-700">
-                <strong>Parking :</strong> Un parking gravillonné a été aménagé pour UNE voiture dans le jardin, 
-                une deuxième voiture peut stationner dans la rue le long de la haie.
+                <strong>Parking :</strong> {t.greenLodge.access.parking}
               </p>
               <p className="text-gray-700 mt-2">
-                <strong>Grand portail coulissant</strong>, merci de le fermer avec douceur.
+                <strong>{t.greenLodge.access.gate}</strong>
               </p>
             </div>
           </motion.div>
@@ -512,7 +474,6 @@ const GreenLodge = () => {
         phone={contactInfo.phone}
         email={contactInfo.email}
         airbnbUrl={getAirbnbUrl(contactInfo.airbnb.greenLodge)}
-        address="Dinard, Bretagne"
       />
     </div>
   )
