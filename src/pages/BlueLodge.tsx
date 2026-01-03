@@ -21,7 +21,6 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
-// Images du Blue Lodge
 const baseUrl = import.meta.env.BASE_URL
 const blueLodgeImages = [
   `${baseUrl}images/blue-lodge/6c294cc8-0672-4fd1-b71f-346f18617562.avif`,
@@ -34,7 +33,6 @@ const blueLodgeImages = [
   `${baseUrl}images/blue-lodge/fd196e17-a52d-4d0d-8f02-2212a6fb3547.avif`,
 ]
 
-// Image principale pour le Hero (première image)
 const blueLodgeHeroImage = blueLodgeImages[0]
 
 const BlueLodge = () => {

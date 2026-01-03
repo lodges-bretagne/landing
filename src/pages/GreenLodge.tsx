@@ -23,7 +23,6 @@ import {
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 
-// Images du Green Lodge
 const baseUrl = import.meta.env.BASE_URL
 const greenLodgeImages = [
   `${baseUrl}images/green-lodge/04133bb1-88e8-4911-bc55-aafd17ee01c9.jpeg`,
@@ -48,7 +47,6 @@ const greenLodgeImages = [
   `${baseUrl}images/green-lodge/fb612a86-3a18-4ce8-a9bb-46ac9f244b8f.avif`,
 ]
 
-// Image principale pour le Hero (première image)
 const greenLodgeHeroImage = greenLodgeImages[0]
 
 const GreenLodge = () => {
