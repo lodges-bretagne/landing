@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail, ExternalLink } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
+import { getPhoneNumberForLink } from '../config/contact'
 
 interface ContactSectionProps {
   theme: 'blue' | 'green'
@@ -33,7 +34,7 @@ const ContactSection = ({ theme, phone, email, airbnbUrl }: ContactSectionProps)
           <div className="space-y-4">
             {phone && (
               <a
-                href={`tel:${phone.replace(/\s/g, '')}`}
+                href={`tel:${getPhoneNumberForLink()}`}
                 className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-colors group bg-white rounded-xl p-6 shadow-sm hover:shadow-md"
               >
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition-colors">

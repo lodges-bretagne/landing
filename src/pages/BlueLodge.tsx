@@ -4,7 +4,7 @@ import FeatureCard from '../components/FeatureCard'
 import ContactSection from '../components/ContactSection'
 import Navbar from '../components/Navbar'
 import ImageGallery from '../components/ImageGallery'
-import { contactInfo, getAirbnbUrl } from '../config/contact'
+import { contactInfo, getAirbnbUrl, getPhoneNumber } from '../config/contact'
 import { useLanguage } from '../i18n/LanguageContext'
 import {
   Wifi,
@@ -37,7 +37,8 @@ const blueLodgeImages = [
 const blueLodgeHeroImage = blueLodgeImages[0]
 
 const BlueLodge = () => {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const phoneNumber = getPhoneNumber(language)
   
   return (
     <div className="min-h-screen bg-white">
@@ -46,7 +47,7 @@ const BlueLodge = () => {
         title={t.blueLodge.title}
         subtitle={t.blueLodge.subtitle}
         theme="blue"
-        phone={contactInfo.phone}
+        phone={phoneNumber}
         email={contactInfo.email}
         backgroundImage={blueLodgeHeroImage}
         airbnbUrl={getAirbnbUrl(contactInfo.airbnb.blueLodge)}
@@ -384,7 +385,7 @@ const BlueLodge = () => {
 
       <ContactSection
         theme="blue"
-        phone={contactInfo.phone}
+        phone={phoneNumber}
         email={contactInfo.email}
         airbnbUrl={getAirbnbUrl(contactInfo.airbnb.blueLodge)}
       />

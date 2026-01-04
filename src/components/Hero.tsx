@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Phone, Mail } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
+import { getPhoneNumberForLink } from '../config/contact'
 
 interface HeroProps {
   title: string
@@ -71,7 +72,7 @@ const Hero = ({ title, subtitle, theme, phone, email, backgroundImage, airbnbUrl
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
             {phone && (
               <motion.a
-                href={`tel:${phone.replace(/\s/g, '')}`}
+                href={`tel:${getPhoneNumberForLink()}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`${colors.button} text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 shadow-lg transition-all`}
