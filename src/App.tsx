@@ -7,7 +7,7 @@ import GreenLodge from './pages/GreenLodge'
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter basename="/landing">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blue-lodge" element={<BlueLodge />} />

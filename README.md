@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-The development server will start at `http://localhost:5173/landing/`
+The development server will start at `http://localhost:5173/`
 
 ## Build
 
@@ -43,17 +43,24 @@ npm run build
 
 ## Deployment
 
-The site is configured to deploy to GitHub Pages at `https://lodges-bretagne.github.io/landing/`
+The site is configured to deploy to GitHub Pages and is accessible at `https://lodges-bretagne.fr`
 
-### Automatic Deployment
+### Custom Domain Setup
 
-The project includes a GitHub Actions workflow that automatically deploys on push to the main branch.
+The project includes a `CNAME` file in the `public/` directory that configures the custom domain `lodges-bretagne.fr`. This file is automatically copied to the build output during deployment.
+
+To set up the custom domain:
+1. Configure a CNAME record in your DNS settings pointing `lodges-bretagne.fr` to `lodges-bretagne.github.io`
+2. In your GitHub repository settings, go to Pages and add `lodges-bretagne.fr` as a custom domain
+3. GitHub will automatically verify and configure the domain
 
 ### Manual Deployment
 
 ```bash
 npm run deploy
 ```
+
+This will build the project and deploy it to the `gh-pages` branch.
 
 ## Project Structure
 
