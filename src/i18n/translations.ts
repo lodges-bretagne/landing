@@ -211,8 +211,8 @@ export const translations: Record<Language, Translations> = {
     },
     common: {
       included: 'Inclus dans le prix',
-      notIncluded: 'Non inclus (payable à l\'arrivée)',
-      payableOnArrival: 'payable à l\'arrivée',
+      notIncluded: 'Non inclus (payable à l’arrivée)',
+      payableOnArrival: 'payable à l’arrivée',
     },
     blueLodge: {
       title: 'Blue Lodge',
@@ -223,8 +223,8 @@ export const translations: Record<Language, Translations> = {
       },
       description: {
         title: 'Confort et calme assurés',
-        intro: 'Le "BLUE LODGE" est idéal pour des vacances sereines au cœur de Saint Malo. Proche plage, commerces, restaurants et intra muros.',
-        details: 'Vous serez séduits par ce beau 2 pièces de 42m² tout confort et très ensoleillé. Décoré avec passion, il est situé au 2ème et dernier étage et possède son jardin privé de 110m² en bas de la résidence. Sans vis à vis, grandes fenêtres, très lumineux, vue dégagée sur coucher de soleil.',
+        intro: 'Le "BLUE LODGE" est idéal pour des vacances sereines au cœur de Saint-Malo. Proche plage, commerces, restaurants et intramuros.',
+        details: 'Vous serez séduits par ce beau 2 pièces de 42m² tout confort et très ensoleillé. Décoré avec passion, il est situé au 2e et dernier étage et possède son jardin privé de 110m² en bas de la résidence. Sans vis-à-vis, grandes fenêtres, très lumineux, vue dégagée sur le coucher de soleil.',
       },
       features: {
         title: 'Équipements & Prestations',
@@ -238,8 +238,8 @@ export const translations: Record<Language, Translations> = {
       accommodation: {
         title: 'Le logement',
         apartment: 'Appartement de 42m²',
-        apartmentDesc1: 'Deux pièces situé au cœur de Saint Malo et sa jolie PLAGE du sillon accessible à pieds en 20mn. Commerces et restaurant à 10MN à pieds.',
-        apartmentDesc2: 'Exposition sud ouest, pièces baignées de soleil (grande fenêtre). Son jardin ensoleillé de 110m² est situé au pied de cette petite résidence Familiale (exclusivement réservé pour vous avec sa place parking PRIVÉE).',
+        apartmentDesc1: 'Deux pièces situé au cœur de Saint-Malo et sa jolie plage du Sillon accessible à pied en 20 min. Commerces et restaurants à 10 min à pied.',
+        apartmentDesc2: 'Exposition sud ouest, pièces baignées de soleil (grande fenêtre). Son jardin ensoleillé de 110m² est situé au pied de cette petite résidence familiale (exclusivement réservée pour vous avec sa place parking privée).',
         bedroom: 'Chambre',
         bedroomItems: [
           'Chambre cocooning, bonne literie',
@@ -249,7 +249,7 @@ export const translations: Record<Language, Translations> = {
         ],
         livingRoom: 'Salon / Salle à manger',
         livingRoomItems: [
-          'Télé écran plat',
+          'TV écran plat',
           'Table à manger',
           'Canapé, fauteuil',
         ],
@@ -257,13 +257,13 @@ export const translations: Record<Language, Translations> = {
         kitchenItems: [
           'Cuisine neuve, toute équipée',
           'Cafetière à piston BODUM',
-          'Grille pain, four, micro ondes',
+          'Grille-pain, four, micro-ondes',
           'Table et chaises',
         ],
         bathroom: 'Salle de bain',
         bathroomItems: [
           'Salle de bain 6m²',
-          'Grande douche à l\'italienne de 1m60',
+          'Grande douche à l’italienne de 1m60',
           'Meuble vasque, WC',
           'Machine à laver + étendoir',
         ],
@@ -273,8 +273,8 @@ export const translations: Record<Language, Translations> = {
         nearby: 'À proximité',
         beach: 'Plage du Sillon "Plus belle plage de France" à 1300m',
         shops: 'Boulangerie artisanale, commerces et restaurants à 600m',
-        intramuros: 'Intra-Muros: 7mn en voiture / 14mn en vélo',
-        station: 'Gare: 5mn en bus (arrêt bus au 50m de la résidence)',
+        intramuros: 'Intramuros : 7 min en voiture / 14 min en vélo',
+        station: 'Gare : 5 min en bus (arrêt bus à 50 m de la résidence)',
         access: 'Accès',
         accessBox: 'BOX fermé pour 2 vélos ou 1 moto.',
         accessGarden: 'JARDIN privé (uniquement pour vous) de 110m² au pied de la copropriété.',
@@ -286,18 +286,18 @@ export const translations: Record<Language, Translations> = {
           'WiFi',
           'Draps de lit (le lit sera fait à votre arrivée)',
           'Serviette de douche',
-          'Produits d\'entretien + torchon',
+          'Produits d’entretien + torchon',
           'Lave linge',
           'Parking',
           'Petit garage moto ou vélos (fermé et privé)',
           'Jardin (chaises et table), barbecue',
         ],
         notIncluded: [
-          'Ménage 30€ (l\'appartement doit être laissé propre)',
-          'Ménage complet 60€ si vous ne souhaitez pas faire le ménage du tout (merci de prévenir)',
+          'Ménage 30 € (l\'appartement doit être laissé propre)',
+          'Ménage complet 60 € si vous ne souhaitez pas faire le ménage du tout (merci de prévenir)',
         ],
         notes: [
-          'Location du samedi au samedi pendant les vacances d\'été',
+          'Location du samedi au samedi pendant les vacances d’été',
           'Appartement non fumeur. Animaux non acceptés.',
           'Maximum un couple. Bébé possible sur demande avec supplément.',
         ],
@@ -313,10 +313,10 @@ export const translations: Record<Language, Translations> = {
       description: {
         title: 'Posez vos valises et profitez',
         bedsMade: 'Les lits seront faits à votre arrivée.',
-        intro: 'Maison en pierre CLASSÉE 2 étoiles. Entièrement rénovée, elle est équipée de toutes les commodités, de la WIFI et d\'un joli petit jardin plein SUD pour vos repas au calme en famille ou entre amis.',
-        seaDistance: 'Mer et GR34 à 950m à pied',
-        shopsDistance: 'Commerces et restaurants à 4mn',
-        dinardDistance: 'Situé côté DINARD (5km)',
+        intro: 'Maison en pierre Classée 2 étoiles. Entièrement rénovée, elle est équipée de toutes les commodités, du WiFi et d’un joli petit jardin plein SUD pour vos repas au calme en famille ou entre amis.',
+        seaDistance: 'Mer et GR® 34 à 950 m à pied',
+        shopsDistance: 'Commerces et restaurants à 4 min',
+        dinardDistance: 'Situé côté Dinard (5km)',
       },
       features: {
         title: 'Équipements & Prestations',
@@ -325,7 +325,7 @@ export const translations: Record<Language, Translations> = {
         towel: { title: 'Serviette douche', desc: 'Serviette fournie pour votre confort' },
         parking: { title: 'Parking privé', desc: 'Place parking gravillonnée pour une voiture ou deux motos' },
         garden: { title: 'Jardin 100m²', desc: 'Jardin plein SUD avec terrasse meublée et barbecue Weber' },
-        capacity: { title: 'Jusqu\'à 5 personnes', desc: 'Maison de 85m² avec 3 chambres' },
+        capacity: { title: 'Jusqu’à 5 personnes', desc: 'Maison de 85m² avec 3 chambres' },
       },
       accommodation: {
         title: 'Le logement',
@@ -337,18 +337,18 @@ export const translations: Record<Language, Translations> = {
         kitchen: 'Cuisine équipée',
         kitchenItems: [
           'Lave vaisselle, lave linge',
-          'Micro onde, four',
+          'Micro-ondes, four',
           'Frigo-congélateur neuf',
           'Cafetière Nespresso',
           'Bouilloire, appareil à raclette',
           'Sel/Poivre, Huile/Vinaigre inclus',
-          'Produits d\'entretien inclus',
+          'Produits d’entretien inclus',
         ],
         floor: 'ÉTAGE',
         bedrooms: '3 Chambres',
-        bedroom1: '1ère chambre : Lit 140 / 2 personnes + grand placard',
-        bedroom2: '2ème chambre : Lit 140 / 2 personnes + grand placard',
-        bedroom3: '3ème chambre : Lit 90 / 1 personne + grand placard',
+        bedroom1: '1re chambre : Lit 140 / 2 personnes + grand placard',
+        bedroom2: '2e chambre : Lit 140 / 2 personnes + grand placard',
+        bedroom3: '3e chambre : Lit 90 / 1 personne + grand placard',
         bedroomNote: 'En dessous de 5 voyageurs, la troisième chambre restera fermée.',
         bathroom: 'Salle de bain',
         bathroomItems: [
@@ -365,14 +365,14 @@ export const translations: Record<Language, Translations> = {
       activities: {
         title: 'Loisirs & Activités',
         waterSportsTitle: 'Activités nautiques',
-        waterSports: 'Voile, kayak, paddle - Cale de mise à l\'eau et École de Voile à la Richardais (2km)',
-        sailing: 'Traversée Dinard/Saint Malo en BATEAU-NAVETTE (10mn)',
-        ferry: 'Traversée Dinard/Saint Malo en BATEAU-NAVETTE (10mn)',
+        waterSports: 'Voile, kayak, paddle - Cale de mise à l’eau et École de Voile à la Richardais (2 km)',
+        sailing: 'Traversée Dinard / Saint-Malo en Bateau navette (10 min)',
+        ferry: 'Traversée Dinard / Saint-Malo en Bateau navette (10 min)',
         nearby: 'À proximité',
-        saintMalo: 'Saint Malo à 10mn (barrage de la Rance à 5mn)',
+        saintMalo: 'Saint-Malo à 10 min (barrage de la Rance à 5 min)',
         other: 'Saint Briac, Lancieux',
         bike: 'Location vélo possible à Dinard',
-        golf: 'Superbe Golf de SAINT BRIAC (vue mer 10km)',
+        golf: 'Superbe Golf de Saint Briac (vue mer 10 km)',
       },
       pricing: {
         title: 'Tarifs & Conditions',
@@ -381,13 +381,13 @@ export const translations: Record<Language, Translations> = {
           'Serviette douche',
           'WiFi',
           'Parking privé',
-          'Produits entretien, torchons',
+          'Produits d’entretien, torchons',
           'Chauffage automne et hiver uniquement',
         ],
         notIncluded: [
-          'Ménage 60€ (la maison doit être laissée propre)',
-          'Ménage complet 120€ si vous ne souhaitez pas faire le ménage du tout (merci de prévenir et de régler à votre arrivée)',
-          'Chauffage printemps/été: 0,20€ du Kilowatt/heure (relevé de compteur à votre arrivée)',
+          'Ménage 60 € (la maison doit être laissée propre)',
+          'Ménage complet 120 € si vous ne souhaitez pas faire le ménage du tout (merci de prévenir et de régler à votre arrivée)',
+          'Chauffage printemps/été : 0,20 € du kWh (relevé de compteur à votre arrivée)',
         ],
         notes: [
           'Nombre de voyageurs : Maximum 5 personnes',
@@ -399,7 +399,7 @@ export const translations: Record<Language, Translations> = {
       access: {
         title: 'Accès & Itinéraire',
         howToFind: 'Comment nous trouver',
-        directions: 'Si vous arrivez de Saint Malo, traversez le barrage de la Rance et prenez de suite à droite direction la RICHARDAIS, juste avant le MINIHIC SUR RANCE tourner à droite vers le lieu dit "SAINT ANTOINE", vous êtes arrivés.',
+        directions: 'Si vous arrivez de Saint-Malo, traversez le barrage de la Rance et prenez tout de suite à droite direction la Richardais, juste avant le Minihic-sur-Rance tourner à droite vers le lieu dit "Saint-Antoine", vous êtes arrivés.',
         parking: 'Un parking gravillonné a été aménagé pour UNE voiture dans le jardin, une deuxième voiture peut stationner dans la rue le long de la haie.',
         gate: 'Grand portail coulissant, merci de le fermer avec douceur.',
       },
@@ -454,7 +454,7 @@ export const translations: Record<Language, Translations> = {
       },
       description: {
         title: 'Comfort and tranquility guaranteed',
-        intro: 'The "BLUE LODGE" is ideal for a peaceful vacation in the heart of Saint Malo. Close to the beach, shops, restaurants and intra muros.',
+        intro: 'The "BLUE LODGE" is ideal for a peaceful vacation in the heart of Saint-Malo. Close to the beach, shops, restaurants and intra muros.',
         details: 'You will be charmed by this beautiful 42m² 2-room apartment, fully equipped and very sunny. Decorated with passion, it is located on the 2nd and top floor and has its private 110m² garden at the bottom of the residence. No overlooking, large windows, very bright, unobstructed view of the sunset.',
       },
       features: {
@@ -469,7 +469,7 @@ export const translations: Record<Language, Translations> = {
       accommodation: {
         title: 'The accommodation',
         apartment: '42m² apartment',
-        apartmentDesc1: 'Two-room apartment located in the heart of Saint Malo and its beautiful SILLON beach accessible on foot in 20 minutes. Shops and restaurants 10 minutes on foot.',
+        apartmentDesc1: 'Two-room apartment located in the heart of Saint-Malo and its beautiful SILLON beach accessible on foot in 20 minutes. Shops and restaurants 10 minutes on foot.',
         apartmentDesc2: 'Southwest exposure, sun-drenched rooms (large window). Its sunny 110m² garden is located at the foot of this small family residence (exclusively reserved for you with its PRIVATE parking space).',
         bedroom: 'Bedroom',
         bedroomItems: [
@@ -524,8 +524,8 @@ export const translations: Record<Language, Translations> = {
           'Garden (chairs and table), barbecue',
         ],
         notIncluded: [
-          'Cleaning 30€ (apartment must be left clean)',
-          'Full cleaning 60€ if you do not wish to do any cleaning (please notify)',
+          'Cleaning 30 € (apartment must be left clean)',
+          'Full cleaning 60 € if you do not wish to do any cleaning (please notify)',
         ],
         notes: [
           'Rental from Saturday to Saturday during summer holidays',
@@ -545,9 +545,9 @@ export const translations: Record<Language, Translations> = {
         title: 'Drop off your bags and enjoy',
         bedsMade: 'Beds will be made upon your arrival.',
         intro: 'Stone house RATED 2 stars. Fully renovated, it is equipped with all amenities, WiFi and a nice little south-facing garden for your quiet meals with family or friends.',
-        seaDistance: 'Sea and GR34 at 950m on foot',
+        seaDistance: 'Sea and GR® 34 at 950m on foot',
         shopsDistance: 'Shops and restaurants 4 minutes away',
-        dinardDistance: 'Located DINARD side (5km)',
+        dinardDistance: 'Located Dinard side (5km)',
       },
       features: {
         title: 'Equipment & Services',
@@ -560,8 +560,8 @@ export const translations: Record<Language, Translations> = {
       },
       accommodation: {
         title: 'The accommodation',
-        house: 'Authentic fisherman\'s house of 85m²',
-        houseDesc: 'This charming stone house, rated 2 stars, welcomes you in an authentic and warm setting. Fully renovated with care, it retains all the charm of its history as a fisherman\'s house while offering all the modern comfort necessary for a pleasant stay.',
+        house: 'Authentic fisherman’s house of 85m²',
+        houseDesc: 'This charming stone house, rated 2 stars, welcomes you in an authentic and warm setting. Fully renovated with care, it retains all the charm of its history as a fisherman’s house while offering all the modern comfort necessary for a pleasant stay.',
         groundFloor: 'GROUND FLOOR',
         livingRoom: 'Large living room / Dining room',
         livingRoomDesc: '46m² with fully equipped kitchen',
@@ -597,13 +597,13 @@ export const translations: Record<Language, Translations> = {
         title: 'Leisure & Activities',
         waterSportsTitle: 'Water sports',
         waterSports: 'Sailing, kayak, paddle - Launch ramp and Sailing School in La Richardais (2km)',
-        sailing: 'Dinard/Saint Malo crossing by FERRY-BOAT (10min)',
-        ferry: 'Dinard/Saint Malo crossing by FERRY-BOAT (10min)',
+        sailing: 'Dinard / Saint-Malo crossing by FERRY-BOAT (10min)',
+        ferry: 'Dinard / Saint-Malo crossing by FERRY-BOAT (10min)',
         nearby: 'Nearby',
-        saintMalo: 'Saint Malo 10 minutes away (Rance dam 5 minutes)',
+        saintMalo: 'Saint-Malo 10 minutes away (Rance dam 5 minutes)',
         other: 'Saint Briac, Lancieux',
         bike: 'Bike rental available in Dinard',
-        golf: 'Superb SAINT BRIAC Golf (sea view 10km)',
+        golf: 'Superb Saint Briac Golf (sea view 10km)',
       },
       pricing: {
         title: 'Rates & Conditions',
@@ -616,9 +616,9 @@ export const translations: Record<Language, Translations> = {
           'Heating autumn and winter only',
         ],
         notIncluded: [
-          'Cleaning 60€ (house must be left clean)',
-          'Full cleaning 120€ if you do not wish to do any cleaning (please notify and pay upon arrival)',
-          'Spring/summer heating: 0.20€ per Kilowatt/hour (meter reading upon your arrival)',
+          'Cleaning 60 € (house must be left clean)',
+          'Full cleaning 120 € if you do not wish to do any cleaning (please notify and pay upon arrival)',
+          'Spring/summer heating: 0.20 € per Kilowatt/hour (meter reading upon your arrival)',
         ],
         notes: [
           'Number of travelers: Maximum 5 people',
@@ -630,7 +630,7 @@ export const translations: Record<Language, Translations> = {
       access: {
         title: 'Access & Directions',
         howToFind: 'How to find us',
-        directions: 'If you arrive from Saint Malo, cross the Rance dam and immediately turn right towards RICHARDAIS, just before MINIHIC SUR RANCE turn right towards the place called "SAINT ANTOINE", you have arrived.',
+        directions: 'If you arrive from Saint-Malo, cross the Rance dam and immediately turn right towards Richardais, just before Minihic-sur-Rance turn right towards the place called "Saint-Antoine", you have arrived.',
         parking: 'A gravel parking space has been set up for ONE car in the garden, a second car can park on the street along the hedge.',
         gate: 'Large sliding gate, please close it gently.',
       },
@@ -685,7 +685,7 @@ export const translations: Record<Language, Translations> = {
       },
       description: {
         title: 'Confort y tranquilidad garantizados',
-        intro: 'El "BLUE LODGE" es ideal para unas vacaciones serenas en el corazón de Saint Malo. Cerca de la playa, tiendas, restaurantes e intra muros.',
+        intro: 'El "BLUE LODGE" es ideal para unas vacaciones serenas en el corazón de Saint-Malo. Cerca de la playa, tiendas, restaurantes e intra muros.',
         details: 'Quedará encantado con este hermoso apartamento de 2 habitaciones de 42m², totalmente equipado y muy soleado. Decorado con pasión, está situado en el 2º y último piso y tiene su jardín privado de 110m² en la parte inferior de la residencia. Sin vistas, grandes ventanales, muy luminoso, vista despejada de la puesta de sol.',
       },
       features: {
@@ -700,7 +700,7 @@ export const translations: Record<Language, Translations> = {
       accommodation: {
         title: 'El alojamiento',
         apartment: 'Apartamento de 42m²',
-        apartmentDesc1: 'Apartamento de 2 habitaciones situado en el corazón de Saint Malo y su hermosa playa del SILLON accesible a pie en 20 minutos. Tiendas y restaurantes a 10 minutos a pie.',
+        apartmentDesc1: 'Apartamento de 2 habitaciones situado en el corazón de Saint-Malo y su hermosa playa del SILLON accesible a pie en 20 minutos. Tiendas y restaurantes a 10 minutos a pie.',
         apartmentDesc2: 'Orientación suroeste, habitaciones bañadas por el sol (gran ventanal). Su soleado jardín de 110m² está situado al pie de esta pequeña residencia familiar (exclusivamente reservado para usted con su plaza de aparcamiento PRIVADA).',
         bedroom: 'Dormitorio',
         bedroomItems: [
@@ -755,8 +755,8 @@ export const translations: Record<Language, Translations> = {
           'Jardín (sillas y mesa), barbacoa',
         ],
         notIncluded: [
-          'Limpieza 30€ (el apartamento debe dejarse limpio)',
-          'Limpieza completa 60€ si no desea hacer ninguna limpieza (por favor avisar)',
+          'Limpieza 30 € (el apartamento debe dejarse limpio)',
+          'Limpieza completa 60 € si no desea hacer ninguna limpieza (por favor avisar)',
         ],
         notes: [
           'Alquiler de sábado a sábado durante las vacaciones de verano',
@@ -776,9 +776,9 @@ export const translations: Record<Language, Translations> = {
         title: 'Deje sus maletas y disfrute',
         bedsMade: 'Las camas estarán hechas a su llegada.',
         intro: 'Casa de piedra CLASIFICADA 2 estrellas. Totalmente renovada, está equipada con todas las comodidades, WiFi y un bonito jardín pequeño orientado al SUR para sus comidas tranquilas en familia o con amigos.',
-        seaDistance: 'Mar y GR34 a 950m a pie',
+        seaDistance: 'Mar y GR® 34 a 950m a pie',
         shopsDistance: 'Tiendas y restaurantes a 4 minutos',
-        dinardDistance: 'Situado lado DINARD (5km)',
+        dinardDistance: 'Situado lado Dinard (5km)',
       },
       features: {
         title: 'Equipamiento y Servicios',
@@ -828,13 +828,13 @@ export const translations: Record<Language, Translations> = {
         title: 'Ocio y Actividades',
         waterSportsTitle: 'Actividades acuáticas',
         waterSports: 'Vela, kayak, paddle - Rampa de lanzamiento y Escuela de Vela en La Richardais (2km)',
-        sailing: 'Travesía Dinard/Saint Malo en TRANSBORDADOR (10min)',
-        ferry: 'Travesía Dinard/Saint Malo en TRANSBORDADOR (10min)',
+        sailing: 'Travesía Dinard / Saint-Malo en TRANSBORDADOR (10min)',
+        ferry: 'Travesía Dinard / Saint-Malo en TRANSBORDADOR (10min)',
         nearby: 'Cerca',
-        saintMalo: 'Saint Malo a 10 minutos (presa de la Rance a 5 minutos)',
+        saintMalo: 'Saint-Malo a 10 minutos (presa de la Rance a 5 minutos)',
         other: 'Saint Briac, Lancieux',
         bike: 'Alquiler de bicicletas disponible en Dinard',
-        golf: 'Magnífico Golf de SAINT BRIAC (vista al mar 10km)',
+        golf: 'Magnífico Golf de Saint Briac (vista al mar 10km)',
       },
       pricing: {
         title: 'Tarifas y Condiciones',
@@ -847,9 +847,9 @@ export const translations: Record<Language, Translations> = {
           'Calefacción otoño e invierno únicamente',
         ],
         notIncluded: [
-          'Limpieza 60€ (la casa debe dejarse limpia)',
-          'Limpieza completa 120€ si no desea hacer ninguna limpieza (por favor avisar y pagar a su llegada)',
-          'Calefacción primavera/verano: 0,20€ por Kilovatio/hora (lectura de contador a su llegada)',
+          'Limpieza 60 € (la casa debe dejarse limpia)',
+          'Limpieza completa 120 € si no desea hacer ninguna limpieza (por favor avisar y pagar a su llegada)',
+          'Calefacción primavera/verano: 0,20 € por Kilovatio/hora (lectura de contador a su llegada)',
         ],
         notes: [
           'Número de viajeros: Máximo 5 personas',
@@ -861,7 +861,7 @@ export const translations: Record<Language, Translations> = {
       access: {
         title: 'Acceso e Itinerario',
         howToFind: 'Cómo encontrarnos',
-        directions: 'Si llega desde Saint Malo, cruce la presa de la Rance y gire inmediatamente a la derecha hacia RICHARDAIS, justo antes de MINIHIC SUR RANCE gire a la derecha hacia el lugar llamado "SAINT ANTOINE", ha llegado.',
+        directions: 'Si llega desde Saint-Malo, cruce la presa de la Rance y gire inmediatamente a la derecha hacia Richardais, justo antes de Minihic-sur-Rance gire a la derecha hacia el lugar llamado "Saint-Antoine", ha llegado.',
         parking: 'Se ha acondicionado una plaza de aparcamiento de grava para UN coche en el jardín, un segundo coche puede aparcar en la calle a lo largo del seto.',
         gate: 'Gran portón corredizo, por favor ciérrelo con suavidad.',
       },
