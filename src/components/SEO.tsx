@@ -11,8 +11,14 @@ interface SEOProps {
 const SEO = ({ title, description, image }: SEOProps) => {
   const { language } = useLanguage()
   const location = useLocation()
-  const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '')
-  const currentUrl = `${baseUrl}${location.pathname}`
+  const siteUrl = "https://lodges-bretagne.fr"
+  
+  // Build URL with language parameter
+  const buildUrl = (lang: string) => {
+    return `${siteUrl}${location.pathname}?lang=${lang}`
+  }
+  const imageUrl = `${siteUrl}${image}`
+  const currentUrl = buildUrl(language)
     
   useEffect(() => {
     document.title = title
@@ -50,20 +56,21 @@ const SEO = ({ title, description, image }: SEOProps) => {
     setMetaTag('og:url', currentUrl, true)
     setMetaTag('og:title', title, true)
     setMetaTag('og:description', description, true)
-    setMetaTag('og:image', image, true)
+    setMetaTag('og:image', imageUrl, true)
     setMetaTag('og:locale', language === 'fr' ? 'fr_FR' : language === 'en' ? 'en_US' : 'es_ES', true)
 
     setMetaTag('twitter:card', 'summary_large_image')
     setMetaTag('twitter:url', currentUrl)
     setMetaTag('twitter:title', title)
     setMetaTag('twitter:description', description)
-    setMetaTag('twitter:image', image)
+    setMetaTag('twitter:image', imageUrl)
 
-    setLinkTag('alternate', currentUrl, 'fr')
-    setLinkTag('alternate', currentUrl, 'en')
-    setLinkTag('alternate', currentUrl, 'es')
-    setLinkTag('alternate', currentUrl, 'x-default')
-  }, [title, description, image, currentUrl, language, "website"])
+    // Hreflang tags with language parameters
+    setLinkTag('alternate', buildUrl('fr'), 'fr')
+    setLinkTag('alternate', buildUrl('en'), 'en')
+    setLinkTag('alternate', buildUrl('es'), 'es')
+    setLinkTag('alternate', buildUrl('fr'), 'x-default')
+  }, [title, description, image, currentUrl, language, location.pathname])
 
   return null
 }

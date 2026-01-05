@@ -12,6 +12,14 @@ const Navbar = ({ theme }: NavbarProps) => {
   const isHome = location.pathname === '/'
   const { language, setLanguage, t } = useLanguage()
   const [showLanguageMenu, setShowLanguageMenu] = useState(false)
+  
+  // Build link with language parameter
+  const buildLink = (path: string) => {
+    if (language === 'fr') {
+      return path
+    }
+    return `${path}?lang=${language}`
+  }
 
   const themeColors = {
     blue: {
@@ -42,14 +50,14 @@ const Navbar = ({ theme }: NavbarProps) => {
           <div className="flex items-center gap-4">
             {!isHome && (
               <Link
-                to="/"
+                to={buildLink('/')}
                 className="px-4 py-2 rounded-lg hover:bg-white/20 transition-colors"
               >
                 {t.nav.home}
               </Link>
             )}
             <Link
-              to="/blue-lodge"
+              to={buildLink('/blue-lodge')}
               className={`px-4 py-2 rounded-lg transition-colors ${
                 location.pathname === '/blue-lodge'
                   ? 'bg-white/30'
@@ -59,7 +67,7 @@ const Navbar = ({ theme }: NavbarProps) => {
               {t.nav.blueLodge}
             </Link>
             <Link
-              to="/green-lodge"
+              to={buildLink('/green-lodge')}
               className={`px-4 py-2 rounded-lg transition-colors ${
                 location.pathname === '/green-lodge'
                   ? 'bg-white/30'

@@ -19,7 +19,7 @@ interface StructuredDataProps {
 }
 
 const StructuredData = ({ name, description, images, address, latitude, longitude, path, numberOfRooms }: StructuredDataProps) => {
-  const siteUrl = import.meta.env.BASE_URL.replace(/\/$/, '')
+  const siteUrl = "https://lodges-bretagne.fr"
   const structuredData = useMemo(() => {
     const data: any = {
       '@context': 'https://schema.org',

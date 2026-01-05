@@ -6,15 +6,15 @@ import GreenLodge from './pages/GreenLodge'
 
 function App() {
   return (
-    <LanguageProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <LanguageProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blue-lodge" element={<BlueLodge />} />
           <Route path="/green-lodge" element={<GreenLodge />} />
         </Routes>
-      </BrowserRouter>
-    </LanguageProvider>
+      </LanguageProvider>
+    </BrowserRouter>
   )
 }
 
