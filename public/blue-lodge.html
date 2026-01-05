@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url=/">
-    <title>Lodge - Page non trouvée</title>
     <script>
       // Redirect to index.html with the path as a query parameter
       var location = window.location
-      var path = location.pathname.slice(1) // Remove leading /
       var redirect = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '') +
-        '/?/' + path.replace(/&/g, '~and~') +
+        '/?/' + 'blue-lodge'.replace(/&/g, '~and~') +
         (location.search ? '&' + location.search.slice(1).replace(/&/g, '~and~') : '') +
         location.hash
       window.location.replace(redirect)
