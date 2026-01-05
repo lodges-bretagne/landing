@@ -17,6 +17,28 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Handle GitHub Pages SPA redirect before React loads
+      // When 404.html redirects to /?/path, decode it and redirect properly
+      (function() {
+        const location = window.location
+        if (location.pathname === '/' && location.search.startsWith('?/')) {
+          // Extract the path from ?/path&other=params
+          const search = location.search.slice(2) // Remove '?/'
+          const parts = search.split('&')
+          const path = parts[0].replace(/~and~/g, '&')
+          const decodedPath = decodeURIComponent(path)
+          
+          // Extract remaining query params (if any)
+          const remainingParams = parts.slice(1).join('&').replace(/~and~/g, '&')
+          const queryString = remainingParams ? '?' + remainingParams : ''
+          
+          // Redirect to the correct path
+          const newUrl = decodedPath + queryString + location.hash
+          window.history.replaceState(null, '', newUrl)
+        }
+      })()
+    </script>
   </body>
 </html>
 
