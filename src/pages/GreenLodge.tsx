@@ -4,6 +4,8 @@ import FeatureCard from '../components/FeatureCard'
 import ContactSection from '../components/ContactSection'
 import Navbar from '../components/Navbar'
 import ImageGallery from '../components/ImageGallery'
+import SEO from '../components/SEO'
+import StructuredData from '../components/StructuredData'
 import { contactInfo, getAirbnbUrl, getPhoneNumber } from '../config/contact'
 import { useLanguage } from '../i18n/LanguageContext'
 import {
@@ -53,9 +55,29 @@ const greenLodgeHeroImage = greenLodgeImages[0]
 const GreenLodge = () => {
   const { t, language } = useLanguage()
   const phoneNumber = getPhoneNumber(language)
-  
+
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title={t.greenLodge.seo.title}
+        description={t.greenLodge.seo.description}
+        image={greenLodgeHeroImage}
+      />
+      <StructuredData
+        name={t.greenLodge.title}
+        description={t.greenLodge.seo.description}
+        images={greenLodgeImages}
+        address={{
+          addressLocality: 'Dinard',
+          addressRegion: 'Bretagne',
+          postalCode: '35800',
+          addressCountry: 'FR',
+        }}
+        latitude={48.6314}
+        longitude={-2.0620}
+        path="green-lodge"
+        numberOfRooms={3}
+      />
       <Navbar theme="green" />
       <Hero
         title={t.greenLodge.title}
@@ -86,7 +108,7 @@ const GreenLodge = () => {
               Une maison authentique au charme breton
             </p>
           </motion.div>
-          <ImageGallery images={greenLodgeImages} theme="green" />
+          <ImageGallery images={greenLodgeImages} theme="green" lodgeName={t.greenLodge.title} />
         </div>
       </Section>
 
@@ -190,7 +212,7 @@ const GreenLodge = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
             {t.greenLodge.accommodation.title}
           </h2>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -318,7 +340,7 @@ const GreenLodge = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
             {t.greenLodge.activities.title}
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -386,7 +408,7 @@ const GreenLodge = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
             {t.greenLodge.pricing.title}
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -426,7 +448,7 @@ const GreenLodge = () => {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="mt-6 pt-6 border-t border-gray-300">
                 {t.greenLodge.pricing.notes.map((note, index) => (
                   <p key={index} className={`text-sm text-gray-600 ${index > 0 ? 'mb-2' : ''}`}>
@@ -444,7 +466,7 @@ const GreenLodge = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">
             {t.greenLodge.access.title}
           </h2>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

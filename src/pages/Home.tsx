@@ -1,15 +1,21 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
+import SEO from '../components/SEO'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const baseUrl = import.meta.env.BASE_URL
 
 const Home = () => {
   const { t } = useLanguage()
-  
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <SEO 
+        title={t.home.seo.title}
+        description={t.home.seo.description}
+        image={`${baseUrl}images/blue-lodge/6c294cc8-0672-4fd1-b71f-346f18617562.avif`}
+      />
       <Navbar />
       <div className="container mx-auto px-4 py-16">
         <motion.div

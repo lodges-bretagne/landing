@@ -5,9 +5,10 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 interface ImageGalleryProps {
   images: string[]
   theme: 'blue' | 'green'
+  lodgeName?: string
 }
 
-const ImageGallery = ({ images }: ImageGalleryProps) => {
+const ImageGallery = ({ images, theme, lodgeName = 'Lodge' }: ImageGalleryProps) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
 
   const openModal = (index: number) => {
@@ -46,7 +47,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
           >
             <img
               src={image}
-              alt={`Photo ${index + 1}`}
+              alt={`${lodgeName} - Photo ${index + 1} - ${theme === 'blue' ? 'Appartement Saint-Malo' : 'Maison Dinard'}`}
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               loading="lazy"
             />
@@ -106,7 +107,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               src={images[selectedIndex]}
-              alt={`Photo ${selectedIndex + 1}`}
+              alt={`${lodgeName} - Photo ${selectedIndex + 1} - ${theme === 'blue' ? 'Appartement Saint-Malo' : 'Maison Dinard'}`}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />

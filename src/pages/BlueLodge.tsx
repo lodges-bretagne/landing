@@ -4,6 +4,8 @@ import FeatureCard from '../components/FeatureCard'
 import ContactSection from '../components/ContactSection'
 import Navbar from '../components/Navbar'
 import ImageGallery from '../components/ImageGallery'
+import SEO from '../components/SEO'
+import StructuredData from '../components/StructuredData'
 import { contactInfo, getAirbnbUrl, getPhoneNumber } from '../config/contact'
 import { useLanguage } from '../i18n/LanguageContext'
 import {
@@ -39,9 +41,29 @@ const blueLodgeHeroImage = blueLodgeImages[0]
 const BlueLodge = () => {
   const { t, language } = useLanguage()
   const phoneNumber = getPhoneNumber(language)
-  
+
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title={t.blueLodge.seo.title}
+        description={t.blueLodge.seo.description}
+        image={blueLodgeHeroImage}
+      />
+      <StructuredData
+        name={t.blueLodge.title}
+        description={t.blueLodge.seo.description}
+        images={blueLodgeImages}
+        address={{
+          addressLocality: 'Saint-Malo',
+          addressRegion: 'Bretagne',
+          postalCode: '35400',
+          addressCountry: 'FR',
+        }}
+        latitude={48.6496}
+        longitude={-2.0258}
+        path="blue-lodge"
+        numberOfRooms={1}
+      />
       <Navbar theme="blue" />
       <Hero
         title={t.blueLodge.title}
@@ -72,7 +94,7 @@ const BlueLodge = () => {
               {t.blueLodge.photos.subtitle}
             </p>
           </motion.div>
-          <ImageGallery images={blueLodgeImages} theme="blue" />
+          <ImageGallery images={blueLodgeImages} theme="blue" lodgeName={t.blueLodge.title} />
         </div>
       </Section>
 
