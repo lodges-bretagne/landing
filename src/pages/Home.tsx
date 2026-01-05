@@ -14,6 +14,7 @@ const Home = () => {
       <SEO 
         title={t.home.seo.title}
         description={t.home.seo.description}
+        keywords={t.home.seo.keywords}
         image={`${baseUrl}images/blue-lodge/6c294cc8-0672-4fd1-b71f-346f18617562.avif`}
       />
       <Navbar />

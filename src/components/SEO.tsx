@@ -6,16 +6,18 @@ interface SEOProps {
   title: string
   description: string
   image: string
+  keywords: string
 }
 
-const SEO = ({ title, description, image }: SEOProps) => {
+const SEO = ({ title, description, image, keywords }: SEOProps) => {
   const { language } = useLanguage()
   const location = useLocation()
   const siteUrl = "https://lodges-bretagne.fr"
   
-  // Build URL with language parameter
   const buildUrl = (lang: string) => {
-    return `${siteUrl}${location.pathname}?lang=${lang}`
+    return lang === 'fr'
+      ? `${siteUrl}${location.pathname}`
+      : `${siteUrl}${location.pathname}?lang=${lang}`
   }
   const imageUrl = `${siteUrl}${image}`
   const currentUrl = buildUrl(language)
@@ -50,6 +52,7 @@ const SEO = ({ title, description, image }: SEOProps) => {
     }
 
     setMetaTag('description', description)
+    setMetaTag('keywords', keywords)
     setLinkTag('canonical', currentUrl)
 
     setMetaTag('og:type', "website", true)
@@ -57,7 +60,20 @@ const SEO = ({ title, description, image }: SEOProps) => {
     setMetaTag('og:title', title, true)
     setMetaTag('og:description', description, true)
     setMetaTag('og:image', imageUrl, true)
-    setMetaTag('og:locale', language === 'fr' ? 'fr_FR' : language === 'en' ? 'en_US' : 'es_ES', true)
+    let ogLocale;
+    switch (language) {
+      case 'en':
+        ogLocale = 'en_UK';
+        break;
+      case 'es':
+        ogLocale = 'es_ES';
+        break;
+      case 'fr':
+      default:
+        ogLocale = 'fr_FR';
+        break;
+    }
+    setMetaTag('og:locale', ogLocale, true)
 
     setMetaTag('twitter:card', 'summary_large_image')
     setMetaTag('twitter:url', currentUrl)
@@ -65,12 +81,11 @@ const SEO = ({ title, description, image }: SEOProps) => {
     setMetaTag('twitter:description', description)
     setMetaTag('twitter:image', imageUrl)
 
-    // Hreflang tags with language parameters
-    setLinkTag('alternate', buildUrl('fr'), 'fr')
+    setLinkTag('alternate', `${siteUrl}${location.pathname}?lang=fr`, 'fr')
     setLinkTag('alternate', buildUrl('en'), 'en')
     setLinkTag('alternate', buildUrl('es'), 'es')
     setLinkTag('alternate', buildUrl('fr'), 'x-default')
-  }, [title, description, image, currentUrl, language, location.pathname])
+  }, [title, description, image, keywords, currentUrl, language, location.pathname])
 
   return null
 }

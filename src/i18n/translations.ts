@@ -14,6 +14,7 @@ export interface Translations {
     seo: {
       title: string
       description: string
+      keywords: string
     }
     blueLodge: {
       title: string
@@ -56,6 +57,7 @@ export interface Translations {
     seo: {
       title: string
       description: string
+      keywords: string
     }
     photos: {
       title: string
@@ -115,6 +117,7 @@ export interface Translations {
     seo: {
       title: string
       description: string
+      keywords: string
     }
     photos: {
       title: string
@@ -198,6 +201,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Lodges Bretagne - Hébergements de charme à Saint-Malo et Dinard',
         description: 'Découvrez nos hébergements de charme à Saint-Malo et Dinard. Blue Lodge et Green Lodge : locations vacances bord de mer en Bretagne avec jardin, WiFi et parking privé.',
+        keywords: 'location vacances, Saint-Malo, Dinard, Bretagne, hébergement bord de mer, appartement, maison, Blue Lodge, Green Lodge, location saisonnière, vacances Bretagne, location avec jardin, WiFi, parking privé',
       },
       blueLodge: {
         title: 'Blue Lodge',
@@ -236,6 +240,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Blue Lodge - Charmant 2 pièces à Saint-Malo, bord de mer | Lodges Bretagne',
         description: 'Charmant appartement de 42m² avec jardin privé de 110m² à Saint-Malo, proche de la plage du Sillon. Location vacances bord de mer avec WiFi, parking privé et équipements modernes.',
+        keywords: 'Blue Lodge, location Saint-Malo, appartement Saint-Malo, location vacances Saint-Malo, hébergement bord de mer, plage du Sillon, location avec jardin, appartement 42m², location couple, vacances Bretagne',
       },
       photos: {
         title: 'Découvrez Blue Lodge',
@@ -329,6 +334,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Green Lodge - Maison de charme bord de mer côté Dinard | Lodges Bretagne',
         description: 'Maison authentique de pêcheur de 85m² classée 2 étoiles à Dinard, avec jardin de 100m². Location vacances bord de mer jusqu\'à 5 personnes, proche de Saint-Malo et des plages.',
+        keywords: 'Green Lodge, location Dinard, maison Dinard, location vacances Dinard, maison de pêcheur, location 5 personnes, hébergement classé 2 étoiles, location avec jardin Dinard, vacances famille Dinard, GR34',
       },
       photos: {
         title: 'Découvrez Green Lodge',
@@ -441,6 +447,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Lodges Brittany - Charming accommodations in Saint-Malo and Dinard',
         description: 'Discover our charming accommodations in Saint-Malo and Dinard. Blue Lodge and Green Lodge: seaside vacation rentals in Brittany with garden, WiFi and private parking.',
+        keywords: 'vacation rental, Saint-Malo, Dinard, Brittany, seaside accommodation, apartment, house, Blue Lodge, Green Lodge, holiday rental, Brittany vacation, rental with garden, WiFi, private parking',
       },
       blueLodge: {
         title: 'Blue Lodge',
@@ -479,6 +486,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Blue Lodge - Charming 2-room apartment in Saint-Malo, by the sea | Lodges Brittany',
         description: 'Charming 42m² apartment with private 110m² garden in Saint-Malo, close to Sillon beach. Seaside vacation rental with WiFi, private parking and modern amenities.',
+        keywords: 'Blue Lodge, Saint-Malo rental, Saint-Malo apartment, Saint-Malo vacation rental, seaside accommodation, Sillon beach, rental with garden, 42m² apartment, couple rental, Brittany vacation',
       },
       photos: {
         title: 'Discover Blue Lodge',
@@ -572,6 +580,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Green Lodge - Charming house by the sea, Dinard side | Lodges Brittany',
         description: 'Authentic 2-star rated 85m² fisherman\'s house in Dinard, with 100m² garden. Seaside vacation rental for up to 5 people, close to Saint-Malo and beaches.',
+        keywords: 'Green Lodge, Dinard rental, Dinard house, Dinard vacation rental, fisherman house, 5 people rental, 2-star rated accommodation, rental with garden Dinard, family vacation Dinard, GR34',
       },
       photos: {
         title: 'Discover Green Lodge',
@@ -684,6 +693,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Lodges Bretaña - Alojamientos con encanto en Saint-Malo y Dinard',
         description: 'Descubra nuestros alojamientos con encanto en Saint-Malo y Dinard. Blue Lodge y Green Lodge: alquileres vacacionales junto al mar en Bretaña con jardín, WiFi y aparcamiento privado.',
+        keywords: 'alquiler vacacional, Saint-Malo, Dinard, Bretaña, alojamiento junto al mar, apartamento, casa, Blue Lodge, Green Lodge, alquiler vacaciones, vacaciones Bretaña, alquiler con jardín, WiFi, aparcamiento privado',
       },
       blueLodge: {
         title: 'Blue Lodge',
@@ -722,6 +732,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Blue Lodge - Encantador apartamento de 2 habitaciones en Saint-Malo, junto al mar | Lodges Bretaña',
         description: 'Encantador apartamento de 42m² con jardín privado de 110m² en Saint-Malo, cerca de la playa del Sillon. Alquiler vacacional junto al mar con WiFi, aparcamiento privado y comodidades modernas.',
+        keywords: 'Blue Lodge, alquiler Saint-Malo, apartamento Saint-Malo, alquiler vacacional Saint-Malo, alojamiento junto al mar, playa del Sillon, alquiler con jardín, apartamento 42m², alquiler pareja, vacaciones Bretaña',
       },
       photos: {
         title: 'Descubra Blue Lodge',
@@ -815,6 +826,7 @@ export const translations: Record<Language, Translations> = {
       seo: {
         title: 'Green Lodge - Casa con encanto junto al mar, lado Dinard | Lodges Bretaña',
         description: 'Casa auténtica de pescador de 85m² clasificada 2 estrellas en Dinard, con jardín de 100m². Alquiler vacacional junto al mar hasta 5 personas, cerca de Saint-Malo y playas.',
+        keywords: 'Green Lodge, alquiler Dinard, casa Dinard, alquiler vacacional Dinard, casa de pescador, alquiler 5 personas, alojamiento 2 estrellas, alquiler con jardín Dinard, vacaciones familia Dinard, GR34',
       },
       photos: {
         title: 'Descubra Green Lodge',

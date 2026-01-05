@@ -61,6 +61,7 @@ const GreenLodge = () => {
       <SEO
         title={t.greenLodge.seo.title}
         description={t.greenLodge.seo.description}
+        keywords={t.greenLodge.seo.keywords}
         image={greenLodgeHeroImage}
       />
       <StructuredData

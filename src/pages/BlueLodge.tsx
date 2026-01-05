@@ -47,6 +47,7 @@ const BlueLodge = () => {
       <SEO 
         title={t.blueLodge.seo.title}
         description={t.blueLodge.seo.description}
+        keywords={t.blueLodge.seo.keywords}
         image={blueLodgeHeroImage}
       />
       <StructuredData
