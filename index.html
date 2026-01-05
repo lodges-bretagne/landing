@@ -15,6 +15,51 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Handle GitHub Pages SPA redirect before React loads
+      // When 404.html redirects to /?/path, decode it and redirect properly
+      (function() {
+        var loc = window.location
+        var search = loc.search
+        
+        // Check if we have the SPA redirect format: /?/path
+        if (loc.pathname === '/' && search && search.startsWith('?/')) {
+          // Extract everything after ?/
+          var encoded = search.slice(2)
+          
+          // Split path and query params
+          var parts = encoded.split('&')
+          var encodedPath = parts[0]
+          var queryParams = parts.slice(1)
+          
+          // Decode the path
+          var decodedPath = encodedPath.replace(/~and~/g, '&')
+          try {
+            decodedPath = decodeURIComponent(decodedPath)
+          } catch (e) {
+            // If decoding fails, keep as is
+          }
+          
+          // Ensure path starts with /
+          if (decodedPath && !decodedPath.startsWith('/')) {
+            decodedPath = '/' + decodedPath
+          }
+          
+          // Reconstruct query string from remaining params
+          var queryStr = ''
+          if (queryParams.length > 0) {
+            var decodedParams = queryParams.join('&').replace(/~and~/g, '&')
+            queryStr = '?' + decodedParams
+          }
+          
+          // Build final URL
+          var finalUrl = decodedPath + queryStr + loc.hash
+          
+          // Update URL immediately (synchronously, before React loads)
+          window.history.replaceState(null, '', finalUrl)
+        }
+      })()
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
