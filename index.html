@@ -21,21 +21,44 @@
       // Handle GitHub Pages SPA redirect before React loads
       // When 404.html redirects to /?/path, decode it and redirect properly
       (function() {
-        const location = window.location
-        if (location.pathname === '/' && location.search.startsWith('?/')) {
-          // Extract the path from ?/path&other=params
-          const search = location.search.slice(2) // Remove '?/'
-          const parts = search.split('&')
-          const path = parts[0].replace(/~and~/g, '&')
-          const decodedPath = decodeURIComponent(path)
+        var loc = window.location
+        var search = loc.search
+        
+        // Check if we have the SPA redirect format: /?/path
+        if (loc.pathname === '/' && search && search.startsWith('?/')) {
+          // Extract everything after ?/
+          var encoded = search.slice(2)
           
-          // Extract remaining query params (if any)
-          const remainingParams = parts.slice(1).join('&').replace(/~and~/g, '&')
-          const queryString = remainingParams ? '?' + remainingParams : ''
+          // Split path and query params
+          var parts = encoded.split('&')
+          var encodedPath = parts[0]
+          var queryParams = parts.slice(1)
           
-          // Redirect to the correct path
-          const newUrl = decodedPath + queryString + location.hash
-          window.history.replaceState(null, '', newUrl)
+          // Decode the path
+          var decodedPath = encodedPath.replace(/~and~/g, '&')
+          try {
+            decodedPath = decodeURIComponent(decodedPath)
+          } catch (e) {
+            // If decoding fails, keep as is
+          }
+          
+          // Ensure path starts with /
+          if (decodedPath && !decodedPath.startsWith('/')) {
+            decodedPath = '/' + decodedPath
+          }
+          
+          // Reconstruct query string from remaining params
+          var queryStr = ''
+          if (queryParams.length > 0) {
+            var decodedParams = queryParams.join('&').replace(/~and~/g, '&')
+            queryStr = '?' + decodedParams
+          }
+          
+          // Build final URL
+          var finalUrl = decodedPath + queryStr + loc.hash
+          
+          // Update URL immediately (synchronously, before React loads)
+          window.history.replaceState(null, '', finalUrl)
         }
       })()
     </script>
