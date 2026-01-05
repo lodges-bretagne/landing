@@ -449,14 +449,6 @@ const GreenLodge = () => {
                   </li>
                 ))}
               </ul>
-
-              <div className="mt-6 pt-6 border-t border-gray-300">
-                {t.greenLodge.pricing.notes.map((note, index) => (
-                  <p key={index} className={`text-sm text-gray-600 ${index > 0 ? 'mb-2' : ''}`}>
-                    {note}
-                  </p>
-                ))}
-              </div>
             </motion.div>
           </div>
         </div>

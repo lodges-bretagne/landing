@@ -176,7 +176,6 @@ export interface Translations {
       title: string
       included: string[]
       notIncluded: string[]
-      notes: string[]
     }
     access: {
       title: string
@@ -419,12 +418,6 @@ export const translations: Record<Language, Translations> = {
           'Ménage complet 120 € si vous ne souhaitez pas faire le ménage du tout (merci de prévenir et de régler à votre arrivée)',
           'Chauffage printemps/été : 0,20 € du kWh (relevé de compteur à votre arrivée)',
         ],
-        notes: [
-          'Nombre de voyageurs : Maximum 5 personnes',
-          'Pour les réservations de 3 ou 4 voyageurs, seules 2 chambres seront ouvertes. La troisième chambre est réservée pour les réservations de 5 voyageurs.',
-          'Location : Du samedi au samedi en juillet/août',
-          'Maison avec cheminée. Pare-feu obligatoire, bûches non fournies.',
-        ],
       },
       access: {
         title: 'Accès & Itinéraire',
@@ -665,12 +658,6 @@ export const translations: Record<Language, Translations> = {
           'Full cleaning 120 € if you do not wish to do any cleaning (please notify and pay upon arrival)',
           'Spring/summer heating: 0.20 € per Kilowatt/hour (meter reading upon your arrival)',
         ],
-        notes: [
-          'Number of travelers: Maximum 5 people',
-          'For reservations of 3 or 4 travelers, only 2 bedrooms will be open. The third bedroom is reserved for reservations of 5 travelers.',
-          'Rental: Saturday to Saturday in July/August',
-          'House with fireplace. Fireplace screen mandatory, logs not provided.',
-        ],
       },
       access: {
         title: 'Access & Directions',
@@ -910,12 +897,6 @@ export const translations: Record<Language, Translations> = {
           'Limpieza 60 € (la casa debe dejarse limpia)',
           'Limpieza completa 120 € si no desea hacer ninguna limpieza (por favor avisar y pagar a su llegada)',
           'Calefacción primavera/verano: 0,20 € por Kilovatio/hora (lectura de contador a su llegada)',
-        ],
-        notes: [
-          'Número de viajeros: Máximo 5 personas',
-          'Para reservas de 3 o 4 viajeros, solo se abrirán 2 dormitorios. El tercer dormitorio está reservado para reservas de 5 viajeros.',
-          'Alquiler: De sábado a sábado en julio/agosto',
-          'Casa con chimenea. Pantalla de chimenea obligatoria, leños no proporcionados.',
         ],
       },
       access: {
